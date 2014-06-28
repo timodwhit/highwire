@@ -15,7 +15,7 @@
     <div class="container" id="main">
         <div class="row">
             <div>
-                <div class="col-md-3">
+                <div class="col-md-1">
                     <div class="well sidebar-nav">
                         <div class="icon-list">
                             <ul class="nav nav-tabs" role="tablist" id="myTab">
@@ -51,32 +51,36 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="tab-content">
-                            <div class="tab-pane fade in active" id="index">
-                                {{input type="select" value="types"}}
+                    </div>
+                </div>
+                <div class="col-md-3 well">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="index">
+                            <div class="select-search">
+                                {{view Ember.Select content=objectNames}}
                                 {{input type="text" value="search" placeholder="Search" size="25"}}
                             </div>
-                            <div class="tab-pane fade" id="new">
-                                {{input type="text" value="domain" placeholder="Domain" size="25"}}
-                                {{input type="text" value="jcode" placeholder="jCode" size="25"}}
-                            </div>
-                            <div class="tab-pane fade" id="edit">
-                                {{input type="text" value="domain" placeholder="Domain" size="25"}}
-                                {{input type="text" value="jcode" placeholder="jCode" size="25"}}
-                            </div>
-                            <div class="tab-pane fade" id="sync">
+                        </div>
+                        <div class="tab-pane fade" id="new">
+                            {{input type="text" value="domain" placeholder="Domain" size="25"}}
+                            {{input type="text" value="jcode" placeholder="jCode" size="25"}}
+                        </div>
+                        <div class="tab-pane fade" id="edit">
+                            {{input type="text" value="domain" placeholder="Domain" size="25"}}
+                            {{input type="text" value="jcode" placeholder="jCode" size="25"}}
+                        </div>
+                        <div class="tab-pane fade" id="sync">
 
-                            </div>
-                            <div class="tab-pane fade" id="clone">
+                        </div>
+                        <div class="tab-pane fade" id="clone">
 
-                            </div>
-                            <div class="tab-pane fade" id="delete">
+                        </div>
+                        <div class="tab-pane fade" id="delete">
 
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-8">
                     {{outlet}}
                 </div>
             </div>
