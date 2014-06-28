@@ -11,6 +11,9 @@ html, body {
 .ember-view, .full-height {
   height: 98%;
 }
+.main-content-outlet {
+  z-index: -9;
+}
 #main{
   padding-left: 0;
   .left-side-nav {
@@ -21,12 +24,13 @@ html, body {
     }
   }
   .side-forms {
-    overflow: scroll;
     .search-results {
       .search-result {
         border: solid 1px black;
         padding: 10px;
         margin: 10px 0;
+        z-index: 999999;
+        cursor: move;
         @include clear();
         img {
           max-width: 50px;
@@ -44,6 +48,21 @@ html, body {
   }
   .drop-zone {
     height: 100%;
+    .search-result {
+      .logo-image{
+        background-color: gray;
+        @include border-radius(50%);
+        padding: 7px;
+        width: 55px;
+        img {
+          max-width: 40px;
+          height: auto;
+        }
+      }
+    }
+  }
+  .list-view{
+    @extend .drop-zone;
   }
 }
 
@@ -68,11 +87,6 @@ html, body {
     }
   }
 }
-// .tab-content {
-//   > .tab-pane {
-//     display: none;
-//   }
-//   > .active {
-//     display: block;
-//   }
-// }
+.ui-draggable-draging {
+  z-index: 9;
+}

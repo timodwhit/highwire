@@ -65,59 +65,90 @@
                             </div>
                             <p>To add components, drag to canvas on the right.</p>
                             <div class="search-results">
-                                <!--<div class="search-result draggable">
+                                <div class="search-result-wrapper">
+                                <div class="search-result draggable">
+                                  <div class="logo-image">
                                     <img class="image drupal" src="images/drupal.png"/>
+                                </div>
                                     <span class="object-title">Object Title 01</span>
-                                </div>
+                                </div></div>
+                                <div class="search-result-wrapper">
                                 <div class="search-result draggable">
+                                  <div class="logo-image">
                                     <img class="image drupal" src="images/drupal.png"/>
+                                </div>
                                     <span class="object-title">Object Title 02</span>
-                                </div>
+                                </div></div>
+                                <div class="search-result-wrapper">
                                 <div class="search-result draggable">
+                                  <div class="logo-image">
                                     <img class="image drupal" src="images/drupal.png"/>
+                                </div>
                                     <span class="object-title">Object Title 03</span>
-                                </div>
+                                </div></div>
+                                <div class="search-result-wrapper">
                                 <div class="search-result draggable">
+                                  <div class="logo-image">
                                     <img class="image drupal" src="images/drupal.png"/>
+                                </div>
                                     <span class="object-title">Object Title 04</span>
-                                </div>
+                                </div></div>
+                                <div class="search-result-wrapper">
                                 <div class="search-result draggable">
+                                  <div class="logo-image">
                                     <img class="image drupal" src="images/drupal.png"/>
+                                </div>
                                     <span class="object-title">Object Title 05</span>
-                                </div>
+                                </div></div>
+                                <div class="search-result-wrapper">
                                 <div class="search-result draggable">
+                                  <div class="logo-image">
                                     <img class="image drupal" src="images/drupal.png"/>
+                                </div>
                                     <span class="object-title">Object Title 06</span>
-                                </div>
+                                </div></div>
+                                <div class="search-result-wrapper">
                                 <div class="search-result draggable">
+                                  <div class="logo-image">
                                     <img class="image drupal" src="images/drupal.png"/>
+                                </div>
                                     <span class="object-title">Object Title 07</span>
-                                </div>
+                                </div></div>
+                                <div class="search-result-wrapper">
                                 <div class="search-result draggable">
+                                  <div class="logo-image">
                                     <img class="image drupal" src="images/drupal.png"/>
+                                </div>
                                     <span class="object-title">Object Title 08</span>
-                                </div>
+                                </div></div>
+                                <div class="search-result-wrapper">
                                 <div class="search-result draggable">
+                                  <div class="logo-image">
                                     <img class="image drupal" src="images/drupal.png"/>
+                                </div>
                                     <span class="object-title">Object Title 09</span>
-                                </div>
+                                </div></div>
+                                <div class="search-result-wrapper">
                                 <div class="search-result draggable">
+                                  <div class="logo-image">
                                     <img class="image drupal" src="images/drupal.png"/>
+                                </div>
                                     <span class="object-title">Object Title 10</span>
-                                </div>
+                                </div></div>
+                                <div class="search-result-wrapper">
                                 <div class="search-result draggable">
+                                  <div class="logo-image">
                                     <img class="image drupal" src="images/drupal.png"/>
+                                </div>
                                     <span class="object-title">Object Title 11</span>
-                                </div>
+                                </div></div>
+                                <div class="search-result-wrapper">
                                 <div class="search-result draggable">
+                                  <div class="logo-image">
                                     <img class="image drupal" src="images/drupal.png"/>
+                                </div>
                                     <span class="object-title">Object Title 12</span>
-                                </div>-->
-                                {{#each App.productsController}}
-                                  {{#view App.ProductView contentBinding="this"}}
-                                    {{content.name}}
-                                  {{/view}}<br />
-                                {{/each}}
+                                </div></div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="new">
@@ -145,6 +176,14 @@
                             {{input type="button" class="button btn btn-primary full-input" value="delete"}}
                         </div>
                     </div>
+                </div>
+                <div class="btn-group view-buttons" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                      <input type="radio" name="options" id="canvas-radio" checked> Canvas View </input>
+                    </label>
+                    <label class="btn btn-primary">
+                      <input type="radio" name="options" id="list-radio"> List View </input>
+                    </label>
                 </div>
                 <div class="col-md-8 main-content-outlet full-height">
                     {{outlet}}
