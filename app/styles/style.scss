@@ -1,3 +1,4 @@
+@import 'mixins';
 $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
 
@@ -7,8 +8,8 @@ html, body {
     height: 100%;
 }
 
-.ember-view, .wrapper, #main, .row, .sub-row, .left-side-nav, .sidebar-nav, .side-forms, .main-content-outlet {
-  height: 100%;
+.ember-view, .full-height {
+  height: 98%;
 }
 #main{
   padding-left: 0;
@@ -20,6 +21,19 @@ html, body {
     }
   }
   .side-forms {
+    overflow: scroll;
+    .search-results {
+      .search-result {
+        border: solid 1px black;
+        padding: 10px;
+        margin: 10px 0;
+        @include clear();
+        img {
+          max-width: 50px;
+          height: auto;
+        }
+      }
+    }
     .button {
       margin: 10px 0;
       padding: 10px 0;
@@ -34,16 +48,31 @@ html, body {
 }
 
 .nav-tabs{
+  float: left;
+  margin-right: 19px;
   border: none;
-   > li {
+  > li {
     float: none;
-    margin-bottom: 0;
-    &.active a{
+    &.active a {
       border: none;
+      &:hover {
+        border: none;
+      }
     }
-    a {
+    > a {
+      min-width: 74px;
+      margin-right: 0;
+      margin-bottom: 3px;
+      margin-right: -1px;
       border: none;
-      padding: 0;
     }
   }
 }
+// .tab-content {
+//   > .tab-pane {
+//     display: none;
+//   }
+//   > .active {
+//     display: block;
+//   }
+// }

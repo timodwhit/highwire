@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper full-height">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -12,11 +12,11 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
         </div>
     </nav>
-    <div class="container" id="main">
-        <div class="row">
-            <div class="sub-row">
-                <div class="col-md-1 left-side-nav">
-                    <div class="sidebar-nav">
+    <div class="container full-height" id="main">
+        <div class="row full-height">
+            <div class="sub-row full-height">
+                <div class="col-md-1 left-side-nav full-height">
+                    <div class="sidebar-nav full-height">
                         <div class="icon-list">
                             <ul class="nav nav-tabs" role="tablist" id="myTab">
                                 <li class="icon icon-index active">
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 well side-forms">
+                <div class="col-md-3 well side-forms full-height">
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="index">
                             <div class="search-form">
@@ -61,10 +61,63 @@
                                     {{view Ember.Select content=objectNames}}
                                     {{input type="text" value="search" placeholder="Search" size="25"}}
                                 </div>
-                                {{input type="submit" value="search" class="button full-input"}}
+                                {{input type="submit" value="search" class="button btn btn-primary full-input"}}
                             </div>
                             <p>To add components, drag to canvas on the right.</p>
                             <div class="search-results">
+                                <!--<div class="search-result draggable">
+                                    <img class="image drupal" src="images/drupal.png"/>
+                                    <span class="object-title">Object Title 01</span>
+                                </div>
+                                <div class="search-result draggable">
+                                    <img class="image drupal" src="images/drupal.png"/>
+                                    <span class="object-title">Object Title 02</span>
+                                </div>
+                                <div class="search-result draggable">
+                                    <img class="image drupal" src="images/drupal.png"/>
+                                    <span class="object-title">Object Title 03</span>
+                                </div>
+                                <div class="search-result draggable">
+                                    <img class="image drupal" src="images/drupal.png"/>
+                                    <span class="object-title">Object Title 04</span>
+                                </div>
+                                <div class="search-result draggable">
+                                    <img class="image drupal" src="images/drupal.png"/>
+                                    <span class="object-title">Object Title 05</span>
+                                </div>
+                                <div class="search-result draggable">
+                                    <img class="image drupal" src="images/drupal.png"/>
+                                    <span class="object-title">Object Title 06</span>
+                                </div>
+                                <div class="search-result draggable">
+                                    <img class="image drupal" src="images/drupal.png"/>
+                                    <span class="object-title">Object Title 07</span>
+                                </div>
+                                <div class="search-result draggable">
+                                    <img class="image drupal" src="images/drupal.png"/>
+                                    <span class="object-title">Object Title 08</span>
+                                </div>
+                                <div class="search-result draggable">
+                                    <img class="image drupal" src="images/drupal.png"/>
+                                    <span class="object-title">Object Title 09</span>
+                                </div>
+                                <div class="search-result draggable">
+                                    <img class="image drupal" src="images/drupal.png"/>
+                                    <span class="object-title">Object Title 10</span>
+                                </div>
+                                <div class="search-result draggable">
+                                    <img class="image drupal" src="images/drupal.png"/>
+                                    <span class="object-title">Object Title 11</span>
+                                </div>
+                                <div class="search-result draggable">
+                                    <img class="image drupal" src="images/drupal.png"/>
+                                    <span class="object-title">Object Title 12</span>
+                                </div>-->
+                                {{#each App.productsController}}
+                                  {{#view App.ProductView contentBinding="this"}}
+                                    {{content.name}}
+                                  {{/view}}<br />
+                                {{/each}}
                             </div>
                         </div>
                         <div class="tab-pane fade" id="new">
@@ -80,20 +133,20 @@
                             {{input type="text" class="full-input" id="edit-jcode" value="jcode" placeholder="jCode"}}
                         </div>
                         <div class="tab-pane fade" id="sync">
-                            {{input type="button" class="button full-input" value="Dev"}}
-                            {{input type="button" class="button full-input" value="Staging"}}
-                            {{input type="button" class="button full-input" value="QA"}}
-                            {{input type="button" class="button full-input" value="Prod"}}
+                            {{input type="button" class="button btn btn-primary full-input" value="Dev"}}
+                            {{input type="button" class="button btn btn-primary full-input" value="Staging"}}
+                            {{input type="button" class="button btn btn-primary full-input" value="QA"}}
+                            {{input type="button" class="button btn btn-primary full-input" value="Prod"}}
                         </div>
                         <div class="tab-pane fade" id="clone">
-                            {{input type="button" class="button full-input" value="clone"}}
+                            {{input type="button" class="button btn btn-primary full-input" value="clone"}}
                         </div>
                         <div class="tab-pane fade" id="delete">
-                            {{input type="button" class="button full-input" value="delete"}}
+                            {{input type="button" class="button btn btn-primary full-input" value="delete"}}
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 main-content-outlet">
+                <div class="col-md-8 main-content-outlet full-height">
                     {{outlet}}
                 </div>
             </div>
