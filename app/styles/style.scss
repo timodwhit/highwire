@@ -4,13 +4,46 @@ $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 /* Put your CSS here */
 html, body {
     margin: 30px 0;
+    height: 100%;
 }
 
-.nav-tabs > li {
-  float: none;
-  margin-bottom: 0;
-  a {
-    border-bottom-color: #dddddd;
-    padding: 0;
+.ember-view, .wrapper, #main, .row, .sub-row, .left-side-nav, .sidebar-nav, .side-forms, .main-content-outlet {
+  height: 100%;
+}
+#main{
+  padding-left: 0;
+  .left-side-nav {
+    padding-left: 0;
+    .sidebar-nav {
+      padding: 5px;
+
+    }
+  }
+  .side-forms {
+    .button {
+      margin: 10px 0;
+      padding: 10px 0;
+    }
+    .full-input {
+      width: 100%;
+    }
+  }
+  .drop-zone {
+    height: 100%;
+  }
+}
+
+.nav-tabs{
+  border: none;
+   > li {
+    float: none;
+    margin-bottom: 0;
+    &.active a{
+      border: none;
+    }
+    a {
+      border: none;
+      padding: 0;
+    }
   }
 }
