@@ -1,0 +1,85 @@
+<div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">NowWhat</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+        </div>
+    </nav>
+    <div class="container" id="main">
+        <div class="row">
+            <div>
+                <div class="col-md-3">
+                    <div class="well sidebar-nav">
+                        <div class="icon-list">
+                            <ul class="nav nav-tabs" role="tablist" id="myTab">
+                                <li class="icon icon-index active">
+                                    <a href="#index" role="tab" data-toggle="tab">
+                                        <span class="tab-text">index</span>
+                                    </a>
+                                </li>
+                                <li class="icon icon-new">
+                                    <a href="#new" role="tab" data-toggle="tab">
+                                        <span class="tab-text">new</span>
+                                    </a>
+                                </li>
+                                <li class="icon icon-edit">
+                                    <a href="#edit" role="tab" data-toggle="tab">
+                                        <span class="tab-text">edit</span>
+                                    </a>
+                                </li>
+                                <li class="icon icon-sync">
+                                    <a href="#sync" role="tab" data-toggle="tab">
+                                        <span class="tab-text">sync</span>
+                                    </a>
+                                </li>
+                                <li class="icon icon-clone">
+                                    <a href="#clone" role="tab" data-toggle="tab">
+                                        <span class="tab-text">clone</span>
+                                    </a>
+                                </li>
+                                <li class="icon icon-delete">
+                                    <a href="#delete" role="tab" data-toggle="tab">
+                                        <span class="tab-text">delete</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="index">
+                                {{input type="select" value="types"}}
+                                {{input type="text" value="search" placeholder="Search" size="25"}}
+                            </div>
+                            <div class="tab-pane fade" id="new">
+                                {{input type="text" value="domain" placeholder="Domain" size="25"}}
+                                {{input type="text" value="jcode" placeholder="jCode" size="25"}}
+                            </div>
+                            <div class="tab-pane fade" id="edit">
+                                {{input type="text" value="domain" placeholder="Domain" size="25"}}
+                                {{input type="text" value="jcode" placeholder="jCode" size="25"}}
+                            </div>
+                            <div class="tab-pane fade" id="sync">
+
+                            </div>
+                            <div class="tab-pane fade" id="clone">
+
+                            </div>
+                            <div class="tab-pane fade" id="delete">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    {{outlet}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

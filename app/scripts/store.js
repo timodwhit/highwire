@@ -1,0 +1,1 @@
+Highwire.ApplicationAdapter = DS.FixtureAdapter;
