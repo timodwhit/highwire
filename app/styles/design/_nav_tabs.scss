@@ -1,0 +1,21 @@
+.nav-tabs{
+  float: left;
+  margin-right: 19px;
+  border: none;
+  > li {
+    float: none;
+    &.active a {
+      border: none;
+      &:hover {
+        border: none;
+      }
+    }
+    > a {
+      min-width: 74px;
+      margin-right: 0;
+      margin-bottom: 3px;
+      margin-right: -1px;
+      border: none;
+    }
+  }
+}

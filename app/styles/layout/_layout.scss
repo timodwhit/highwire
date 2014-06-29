@@ -1,0 +1,47 @@
+/**
+ * Layouts Partials
+ *
+ * Layout and Design are not the same. Break it out and let it breath.
+ *
+ * Just like the beat.
+ */
+
+// If you have questions about this: Ask Paul Irish.
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#main {
+  @include respond-to('medium') {
+    display: table;
+    height: 100%;
+  }
+}
+.l-col {
+  @include respond-to('medium') {
+    display: table-cell;
+    vertical-align: top;
+    height: 100%;
+  }
+}
+
+.l-col-1 {
+  @include respond-to('medium') {
+    width: 160px;
+    background: $gray_1;
+  }
+}
+
+.l-col-2 {
+  @include respond-to('medium') {
+    width: 360px;
+  }
+}

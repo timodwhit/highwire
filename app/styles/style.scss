@@ -1,6 +1,9 @@
-@import 'mixins';
+@import 'base/base';
+@import 'layout/layout';
+@import 'styleguide/styleguide';
+@import 'design/design';
 $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
-@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
+
 
 /* Put your CSS here */
 html, body {
@@ -15,14 +18,6 @@ html, body {
   z-index: -9;
 }
 #main{
-  padding-left: 0;
-  .left-side-nav {
-    padding-left: 0;
-    .sidebar-nav {
-      padding: 5px;
-
-    }
-  }
   .side-forms {
     .search-results {
       .search-result {
@@ -66,27 +61,6 @@ html, body {
   }
 }
 
-.nav-tabs{
-  float: left;
-  margin-right: 19px;
-  border: none;
-  > li {
-    float: none;
-    &.active a {
-      border: none;
-      &:hover {
-        border: none;
-      }
-    }
-    > a {
-      min-width: 74px;
-      margin-right: 0;
-      margin-bottom: 3px;
-      margin-right: -1px;
-      border: none;
-    }
-  }
-}
 .ui-draggable-draging {
   z-index: 9;
 }
