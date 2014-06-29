@@ -20,195 +20,193 @@
             </ul>
         </div>
     </nav>
-    <div class="container full-height" id="main">
-        <div class="row full-height">
-            <div class="sub-row full-height">
-                <div class="col-md-1 left-side-nav full-height">
-                    <div class="sidebar-nav full-height">
-                        <div class="icon-list">
-                            <ul class="nav nav-tabs inline" role="tablist" id="myTab">
-                                <li class="icon icon-index active">
-                                    <a href="#index" role="tab" data-toggle="tab">
-                                        <span class="tab-text">index</span>
-                                    </a>
-                                </li>
-                                <li class="icon icon-new">
-                                    <a href="#new" role="tab" data-toggle="tab">
-                                        <span class="tab-text">new</span>
-                                    </a>
-                                </li>
-                                <li class="icon icon-edit">
-                                    <a href="#edit" role="tab" data-toggle="tab">
-                                        <span class="tab-text">edit</span>
-                                    </a>
-                                </li>
-                                <li class="icon icon-sync">
-                                    <a href="#sync" role="tab" data-toggle="tab">
-                                        <span class="tab-text">sync</span>
-                                    </a>
-                                </li>
-                                <li class="icon icon-clone">
-                                    <a href="#clone" role="tab" data-toggle="tab">
-                                        <span class="tab-text">clone</span>
-                                    </a>
-                                </li>
-                                <li class="icon icon-delete">
-                                    <a href="#delete" role="tab" data-toggle="tab">
-                                        <span class="tab-text">delete</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 well side-forms full-height">
-                    <div class="tab-content">
-                        <div class="tab-pane fade in active" id="index">
-                            <div class="search-form">
-                                <div class="select-search">
-                                    {{view Ember.Select content=objectNames}}
-                                    {{input type="text" value="search" placeholder="Search" size="25"}}
-                                </div>
-                                {{input type="submit" value="search" class="button btn btn-primary full-input"}}
-                            </div>
-                            <p>To add components, drag to canvas on the right.</p>
-                            <div class="search-results">
-                                <div class="search-result-wrapper">
-                                <div class="search-result draggable">
-                                  <div class="logo-image">
-                                    <img class="image drupal" src="images/drupal.png"/>
-                                </div>
-                                    <span class="object-title">title01.com</span>
-                                    <span class="jCode" style="display: none;">jAbc</span>
-                                </div></div>
-                                <div class="search-result-wrapper">
-                                <div class="search-result draggable">
-                                  <div class="logo-image">
-                                    <img class="image drupal" src="images/drupal.png"/>
-                                </div>
-                                    <span class="object-title">title02.com</span>
-                                    <span class="jCode" style="display: none;">jAbc</span>
-                                </div></div>
-                                <div class="search-result-wrapper">
-                                <div class="search-result draggable">
-                                  <div class="logo-image">
-                                    <img class="image drupal" src="images/drupal.png"/>
-                                </div>
-                                    <span class="object-title">title03.com</span>
-                                    <span class="jCode" style="display: none;">jAbc</span>
-                                </div></div>
-                                <div class="search-result-wrapper">
-                                <div class="search-result draggable">
-                                  <div class="logo-image">
-                                    <img class="image drupal" src="images/drupal.png"/>
-                                </div>
-                                    <span class="object-title">title04.com</span>
-                                    <span class="jCode" style="display: none;">jAbc</span>
-                                </div></div>
-                                <div class="search-result-wrapper">
-                                <div class="search-result draggable">
-                                  <div class="logo-image">
-                                    <img class="image drupal" src="images/drupal.png"/>
-                                </div>
-                                    <span class="object-title">title05.com</span>
-                                    <span class="jCode" style="display: none;">jAbc</span>
-                                </div></div>
-                                <div class="search-result-wrapper">
-                                <div class="search-result draggable">
-                                  <div class="logo-image">
-                                    <img class="image drupal" src="images/drupal.png"/>
-                                </div>
-                                    <span class="object-title">title06.com</span>
-                                    <span class="jCode" style="display: none;">jAbc</span>
-                                </div></div>
-                                <div class="search-result-wrapper">
-                                <div class="search-result draggable">
-                                  <div class="logo-image">
-                                    <img class="image drupal" src="images/drupal.png"/>
-                                </div>
-                                    <span class="object-title">title07.com</span>
-                                    <span class="jCode" style="display: none;">jAbc</span>
-                                </div></div>
-                                <div class="search-result-wrapper">
-                                <div class="search-result draggable">
-                                  <div class="logo-image">
-                                    <img class="image drupal" src="images/drupal.png"/>
-                                </div>
-                                    <span class="object-title">title08.com</span>
-                                    <span class="jCode" style="display: none;">jAbc</span>
-                                </div></div>
-                                <div class="search-result-wrapper">
-                                <div class="search-result draggable">
-                                  <div class="logo-image">
-                                    <img class="image drupal" src="images/drupal.png"/>
-                                </div>
-                                    <span class="object-title">title09.com</span>
-                                    <span class="jCode" style="display: none;">jAbc</span>
-                                </div></div>
-                                <div class="search-result-wrapper">
-                                <div class="search-result draggable">
-                                  <div class="logo-image">
-                                    <img class="image drupal" src="images/drupal.png"/>
-                                </div>
-                                    <span class="object-title">title10.com</span>
-                                    <span class="jCode" style="display: none;">jAbc</span>
-                                </div></div>
-                                <div class="search-result-wrapper">
-                                <div class="search-result draggable">
-                                  <div class="logo-image">
-                                    <img class="image drupal" src="images/drupal.png"/>
-                                </div>
-                                    <span class="object-title">title11.com</span>
-                                    <span class="jCode" style="display: none;">jAbc</span>
-                                </div></div>
-                                <div class="search-result-wrapper">
-                                <div class="search-result draggable">
-                                  <div class="logo-image">
-                                    <img class="image drupal" src="images/drupal.png"/>
-                                </div>
-                                    <span class="object-title">title12.com</span>
-                                    <span class="jCode" style="display: none;">jAbc</span>
-                                </div></div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="new">
-                            <label for="new-domain">Domain Name</label>
-                            {{input type="text" class="full-input" id="new-domain" value="domain" placeholder="Domain"}}
-                            <label for="new-jcode">jCode</label>
-                            {{input type="text" class="full-input" id="new-jcode" value="jcode" placeholder="jCode"}}
-                        </div>
-                        <div class="tab-pane fade" id="edit">
-                            <label for="edit-domain">Domain Name</label>
-                            {{input type="text" class="full-input" id="edit-domain" value="domain" placeholder="Domain"}}
-                            <label for="edit-jcode">jCode</label>
-                            {{input type="text" class="full-input" id="edit-jcode" value="jcode" placeholder="jCode"}}
-                        </div>
-                        <div class="tab-pane fade" id="sync">
-                            {{input type="button" class="button btn btn-primary full-input" value="Dev"}}
-                            {{input type="button" class="button btn btn-primary full-input" value="Staging"}}
-                            {{input type="button" class="button btn btn-primary full-input" value="QA"}}
-                            {{input type="button" class="button btn btn-primary full-input" value="Prod"}}
-                        </div>
-                        <div class="tab-pane fade" id="clone">
-                            {{input type="button" class="button btn btn-primary full-input" value="clone"}}
-                        </div>
-                        <div class="tab-pane fade" id="delete">
-                            {{input type="button" class="button btn btn-primary full-input" value="delete"}}
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-group view-buttons" data-toggle="buttons">
-                    <label class="btn btn-primary active">
-                      <input type="radio" name="options" id="canvas-radio" checked> Canvas View </input>
-                    </label>
-                    <label class="btn btn-primary">
-                      <input type="radio" name="options" id="list-radio"> List View </input>
-                    </label>
-                </div>
-                <div class="main-content-outlet full-height">
-                    {{outlet}}
+    <div class="container" id="main">
+        <div class="l-col l-col-1 left-side-nav">
+            <div class="sidebar-nav">
+                <div class="icon-list">
+                    <ul class="nav nav-tabs" role="tablist" id="myTab">
+                        <li class="icon icon-index active">
+                            <a href="#index" role="tab" data-toggle="tab">
+                                <span class="tab-text">index</span>
+                            </a>
+                        </li>
+                        <li class="icon icon-new">
+                            <a href="#new" role="tab" data-toggle="tab">
+                                <span class="tab-text">new</span>
+                            </a>
+                        </li>
+                        <li class="icon icon-edit">
+                            <a href="#edit" role="tab" data-toggle="tab">
+                                <span class="tab-text">edit</span>
+                            </a>
+                        </li>
+                        <li class="icon icon-sync">
+                            <a href="#sync" role="tab" data-toggle="tab">
+                                <span class="tab-text">sync</span>
+                            </a>
+                        </li>
+                        <li class="icon icon-clone">
+                            <a href="#clone" role="tab" data-toggle="tab">
+                                <span class="tab-text">clone</span>
+                            </a>
+                        </li>
+                        <li class="icon icon-delete">
+                            <a href="#delete" role="tab" data-toggle="tab">
+                                <span class="tab-text">delete</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </div>
+        <div class="l-col l-col-2 side-forms">
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="index">
+                    <div class="search-form">
+                        <div class="select-search">
+                            {{view Ember.Select content=objectNames}}
+                            {{input type="text" value="search" placeholder="Search" size="25"}}
+                        </div>
+                        {{input type="submit" value="search" class="button btn btn-primary full-input"}}
+                    </div>
+                    <p>To add components, drag to canvas on the right.</p>
+                    <div class="search-results">
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                            <img class="image drupal" src="images/drupal.png"/>
+                        </div>
+                            <span class="object-title">title01.com</span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div></div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                            <img class="image drupal" src="images/drupal.png"/>
+                        </div>
+                            <span class="object-title">title02.com</span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div></div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                            <img class="image drupal" src="images/drupal.png"/>
+                        </div>
+                            <span class="object-title">title03.com</span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div></div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                            <img class="image drupal" src="images/drupal.png"/>
+                        </div>
+                            <span class="object-title">title04.com</span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div></div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                            <img class="image drupal" src="images/drupal.png"/>
+                        </div>
+                            <span class="object-title">title05.com</span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div></div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                            <img class="image drupal" src="images/drupal.png"/>
+                        </div>
+                            <span class="object-title">title06.com</span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div></div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                            <img class="image drupal" src="images/drupal.png"/>
+                        </div>
+                            <span class="object-title">title07.com</span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div></div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                            <img class="image drupal" src="images/drupal.png"/>
+                        </div>
+                            <span class="object-title">title08.com</span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div></div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                            <img class="image drupal" src="images/drupal.png"/>
+                        </div>
+                            <span class="object-title">title09.com</span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div></div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                            <img class="image drupal" src="images/drupal.png"/>
+                        </div>
+                            <span class="object-title">title10.com</span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div></div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                            <img class="image drupal" src="images/drupal.png"/>
+                        </div>
+                            <span class="object-title">title11.com</span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div></div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                            <img class="image drupal" src="images/drupal.png"/>
+                        </div>
+                            <span class="object-title">title12.com</span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="new">
+                    <label for="new-domain">Domain Name</label>
+                    {{input type="text" class="full-input" id="new-domain" value="domain" placeholder="Domain"}}
+                    <label for="new-jcode">jCode</label>
+                    {{input type="text" class="full-input" id="new-jcode" value="jcode" placeholder="jCode"}}
+                </div>
+                <div class="tab-pane fade" id="edit">
+                    <label for="edit-domain">Domain Name</label>
+                    {{input type="text" class="full-input" id="edit-domain" value="domain" placeholder="Domain"}}
+                    <label for="edit-jcode">jCode</label>
+                    {{input type="text" class="full-input" id="edit-jcode" value="jcode" placeholder="jCode"}}
+                </div>
+                <div class="tab-pane fade" id="sync">
+                    {{input type="button" class="button btn btn-primary full-input" value="Dev"}}
+                    {{input type="button" class="button btn btn-primary full-input" value="Staging"}}
+                    {{input type="button" class="button btn btn-primary full-input" value="QA"}}
+                    {{input type="button" class="button btn btn-primary full-input" value="Prod"}}
+                </div>
+                <div class="tab-pane fade" id="clone">
+                    {{input type="button" class="button btn btn-primary full-input" value="clone"}}
+                </div>
+                <div class="tab-pane fade" id="delete">
+                    {{input type="button" class="button btn btn-primary full-input" value="delete"}}
+                </div>
+            </div>
+        </div>
+        <div class="l-col l-col-3 main-content">
+          <div class="btn-group view-buttons" data-toggle="buttons">
+              <label class="btn btn-primary active">
+                <input type="radio" name="options" id="canvas-radio" checked> Canvas View </input>
+              </label>
+              <label class="btn btn-primary">
+                <input type="radio" name="options" id="list-radio"> List View </input>
+              </label>
+          </div>
+          <div class="main-content-outlet">
+              {{outlet}}
+          </div>
         </div>
     </div>
 </div>

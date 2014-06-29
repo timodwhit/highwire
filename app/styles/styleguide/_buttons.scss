@@ -1,0 +1,27 @@
+.btn {
+  background: $teal;
+  border: none;
+  @include border-radius(0);
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: $gray_4;
+  color: darken($gray_3,40);
+  line-height: 2;
+  padding: 0 20px;
+  &.active {
+    @include box-shadow(none);
+    background: $teal;
+    color: $white;
+  }
+  &:hover {
+    color: $white;
+    background: lighten($teal, 10);
+  }
+}
+
+input.btn-primary {
+  background: $teal;
+  color: $white;
+}
