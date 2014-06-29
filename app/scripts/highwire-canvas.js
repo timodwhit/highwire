@@ -23,8 +23,8 @@ $(function() {
     drop: function (event, ui) {
       var helperHtml = $(ui.helper).parent().html();
       var helperList = '<li><div class="search-result">' + $(ui.helper).html() + '</div></li>';
-       $('.canvas-view').append(helperHtml);
-       $('.convas-view .search-result').removeClass('ui-draggable-dragging');
+       $('.drop-zone').append(helperHtml);
+       $('.drop-zone .search-result').removeClass('ui-draggable-dragging');
        $('.list-view .list-view-list').append(helperList);
        $('.list-view .list-view-list .search-result').attr('style', '');
        $(ui.draggable).removeClass('draggable ui-draggable');
@@ -32,16 +32,16 @@ $(function() {
   });
 
   //canvas/list-view toggle
-  $(document).on('change', '.sub-row .view-buttons input', function(event) {
+  $(document).on('change', '.view-buttons input', function(event) {
     event.preventDefault();
     var checkedRadio = $('input:checked').attr('id');
     if (checkedRadio == 'list-radio') {
       $('.list-view').fadeIn(function() {
-        $('.canvas-view').addClass('overlay');
+        $('.drop-zone').addClass('overlay');
       });
     }else{
       $('.list-view').fadeOut(function() {
-        $('.canvas-view').removeClass('overlay');
+        $('.drop-zone').removeClass('overlay');
       });
     }
   });
@@ -72,14 +72,19 @@ $(function() {
     tabId = $clickedTab.attr('id'),
     canvasName = tabId.replace('-tab','-canvas'),
     canvasId = '#' + canvasName;
-    $('.main-content-outlet .drop-zone').fadeOut().droppable('disable').removeClass('drop-zone');
+    $('.main-content-outlet .canvas-view').each(function(index, el) {
+      var $thisCanvas = $(this);
+      if ($thisCanvas.hasClass('drop-zone')) {
+        $thisCanvas.fadeOut().droppable('destroy').removeClass('drop-zone');
+      };
+    });
     $(canvasId).fadeIn().addClass('drop-zone').droppable({
       accept: '.draggable',
       drop: function (event, ui) {
         var helperHtml = $(ui.helper).parent().html();
         var helperList = '<li><div class="search-result">' + $(ui.helper).html() + '</div></li>';
-         $('.canvas-view').append(helperHtml);
-         $('.convas-view .search-result').removeClass('ui-draggable-dragging');
+         $('.drop-zone').append(helperHtml);
+         $('.drop-zone .search-result').removeClass('ui-draggable-dragging');
          $('.list-view .list-view-list').append(helperList);
          $('.list-view .list-view-list .search-result').attr('style', '');
          $(ui.draggable).removeClass('draggable ui-draggable');
