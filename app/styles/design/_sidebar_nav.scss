@@ -6,7 +6,7 @@
   .nav-tabs {
     border-bottom: 0;
     li {
-      margin: 0 0 2px;
+      margin: 0 0 1px;
       display: block;
       width: 100%;
       background: $gray_2;
@@ -15,22 +15,22 @@
         margin: 0;
         border: none;
         border-radius: 0;
-        color: $white;
+        color: $gray_3;
         text-transform: uppercase;
       }
       &:hover {
         a{
-          background: lighten($gray_3, 10);
-          color: $gray_2;
+          background: lighten($gray_1, 10);
+          color: $gray_3;
         }
       }
       &.active {
         a {
           color: $gray_2;
-          background: $gray_3;
+          background: $gray_4;
           &:hover {
             border: 0;
-            background: $gray_3;
+            background: $gray_4;
           }
         }
       }
