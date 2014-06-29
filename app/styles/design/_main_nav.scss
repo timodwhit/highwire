@@ -1,0 +1,33 @@
+.navbar {
+  background: $orange;
+  color: $white;
+  max-height: 50px;
+  ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include respond-to('medium') {
+      position: absolute;
+      right: 0;
+      top: 49px;
+    }
+    li {
+      float: left;
+      display: inline-block;
+      margin-left: 2px;
+      text-transform: uppercase;
+      @include rem(1.2);
+      a {
+        line-height: 2;
+        padding: 10px 15px;
+        background: $gray_1;
+        display: block;
+        color: $white;
+        &.active {
+          background: $orange;
+        }
+      }
+    }
+  }
+}

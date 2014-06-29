@@ -1,5 +1,28 @@
 .search-form {
   padding: 10px 15px;
   background: #f3f3f3;
-  margin-bottom: 2
+  margin-bottom: 20px;
+}
+
+.search-result {
+  border: none;
+  padding: 10px;
+  background: $gray_4;
+  margin-bottom: 3px;
+  .logo-image {
+    display: inline-block;
+    padding: 9px 10px;
+    border: 3px solid $gray_4;
+    background: $gray_1;
+    border-radius: 50%;
+    width: 49px;
+  }
+  img {
+    max-width: 100%;
+    width: 22px;
+  }
+  // Search Results in the drop zone
+  .drop-zone & {
+    background: none;
+  }
 }
