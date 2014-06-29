@@ -25,9 +25,9 @@ $(function() {
       var helperList = '<li><div class="search-result">' + $(ui.helper).html() + '</div></li>';
        $('.drop-zone').append(helperHtml);
        $('.drop-zone .search-result').removeClass('ui-draggable-dragging');
-       $('.list-view .list-view-list').append(helperList);
-       $('.list-view .list-view-list .search-result').attr('style', '');
-       $(ui.draggable).removeClass('draggable ui-draggable');
+       $('.droppable-list .list-view-list').append(helperList);
+       $('.droppable-list .list-view-list .search-result').attr('style', '');
+       $(ui.draggable).hide();
     }
   });
 
@@ -36,11 +36,11 @@ $(function() {
     event.preventDefault();
     var checkedRadio = $('input:checked').attr('id');
     if (checkedRadio == 'list-radio') {
-      $('.list-view').fadeIn(function() {
+      $('.droppable-list').fadeIn(function() {
         $('.drop-zone').addClass('overlay');
       });
     }else{
-      $('.list-view').fadeOut(function() {
+      $('.droppable-list').fadeOut(function() {
         $('.drop-zone').removeClass('overlay');
       });
     }
@@ -70,14 +70,33 @@ $(function() {
     event.preventDefault();
     var $clickedTab = $(this),
     tabId = $clickedTab.attr('id'),
-    canvasName = tabId.replace('-tab','-canvas'),
-    canvasId = '#' + canvasName;
+    enviroName = tabId.replace('-tab',''),
+    canvasName = enviroName + '-canvas',
+    canvasId = '#' + canvasName,
+    listName = enviroName + '-list-view',
+    listId = '#' + listName;
+    $('.enviroment-menu li a').each(function(index, el) {
+      var $thisA = $(this);
+      if ($thisA.hasClass('active')) {
+        $thisA.removeClass('active');
+      };
+    });
     $('.main-content-outlet .canvas-view').each(function(index, el) {
       var $thisCanvas = $(this);
       if ($thisCanvas.hasClass('drop-zone')) {
         $thisCanvas.fadeOut().droppable('destroy').removeClass('drop-zone');
       };
     });
+    $('.main-content-outlet .list-view').each(function(index, el) {
+      var $thislist = $(this);
+      if ($thislist.hasClass('droppable-list')) {
+        $thislist.fadeOut().removeClass('droppable-list');
+      };
+    });
+    if ($('#list-radio').closest('.btn').hasClass('active')) {
+      $(listId).show();
+    };
+    $(listId).addClass('droppable-list');
     $(canvasId).fadeIn().addClass('drop-zone').droppable({
       accept: '.draggable',
       drop: function (event, ui) {
@@ -85,10 +104,23 @@ $(function() {
         var helperList = '<li><div class="search-result">' + $(ui.helper).html() + '</div></li>';
          $('.drop-zone').append(helperHtml);
          $('.drop-zone .search-result').removeClass('ui-draggable-dragging');
-         $('.list-view .list-view-list').append(helperList);
-         $('.list-view .list-view-list .search-result').attr('style', '');
-         $(ui.draggable).removeClass('draggable ui-draggable');
+         $('.droppable-list .list-view-list').append(helperList);
+         $('.droppable-list .list-view-list .search-result').attr('style', '');
+         $(ui.draggable).hide();
       }
+    });
+    $('.draggable').show();
+    $clickedTab.addClass('active');
+    $('.main-content-outlet .drop-zone .search-result .object-title').each(function(index, el) {
+      var $thisCanvasObject = $(this),
+      $thisCanvasObjectRole = $thisCanvasObject.attr('role');
+      $('.search-results .search-result .object-title').each(function(index, el) {
+        var $thisResultObject = $(this);
+        var thisResultRole = $(this).attr('role');
+        if (thisResultRole == $thisCanvasObjectRole) {
+          $thisResultObject.closest('.draggable').hide();
+        };
+      });
     });
   });
 
