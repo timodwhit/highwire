@@ -76,8 +76,15 @@ $(function() {
       };
     });
     $('.icon-edit a').click();
-    $clickObject.addClass('active');
     $(".main-content-outlet .droppable-list .search-result .object-title")
+      .each(function(index, el) {
+      var $thisTitleItem = $(this);
+      var thisTitleRole = $thisTitleItem.attr('data-role');
+      if (thisTitleRole == titleDataRole) {
+        $thisTitleItem.closest('.search-result').addClass('active');
+      };
+    });
+    $(".main-content-outlet .drop-zone .search-result .object-title")
       .each(function(index, el) {
       var $thisTitleItem = $(this);
       var thisTitleRole = $thisTitleItem.attr('data-role');
@@ -251,7 +258,14 @@ $(function() {
                 $thisTitleItem.closest('.search-result').fadeIn();
               };
             });
-            $thisSearchResult.fadeOut().remove();
+            $(".main-content-outlet .drop-zone .search-result .object-title")
+              .each(function(index, el) {
+              var $thisTitleItem = $(this);
+              var thisTitleRole = $thisTitleItem.attr('data-role');
+              if (thisTitleRole == thisRole) {
+                $thisTitleItem.closest('.search-result').fadeOut().remove();
+              };
+            });
           };
         });
       }
@@ -279,15 +293,21 @@ $(function() {
     }
   });
 
-  //sync events
-  // $('#sync input').click(function(event) {
-  //   /* Act on the event */
-  //   event.preventDefault();
-  //   var $thisBtn = $(this);
-  //   var thisBtnId = $thisBtn.attr('id');
-  //   var tabId = '#'+thisBtnId +'-sync';
-  //   $('.tab-content .tab-pane.active').removeClass('active');
-  //   $(tabId).addClass('active');
-  // });
+  //sync events show
+  $('#sync input').click(function(event) {
+    /* Act on the event */
+    event.preventDefault();
+    var $thisBtn = $(this);
+    var thisBtnId = $thisBtn.attr('id');
+    var tabId = '#'+thisBtnId +'-sync';
+    $(tabId).fadeIn();
+  });
+
+  //sync overlay close
+  $('.sync-overlay .close-icon').click(function(event) {
+    /* Act on the event */
+    event.preventDefault();
+    $(this).closest('.sync-overlay').fadeOut();
+  });
 
 });

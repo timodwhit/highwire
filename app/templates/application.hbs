@@ -187,12 +187,13 @@
                     {{input type="button" class="button btn btn-primary full-input" id="qa" value="QA"}}
                     {{input type="button" class="button btn btn-primary full-input" id="prod" value="Production"}}
                 </div>
-                <div class="tab-pane fade" id="dev-sync">
+                <div class="sync-overlay" id="dev-sync" style="display:none;">
                     <a class="icon close-icon" href="javascript:void(0)">close</a>
                     <p class="orgin-txt">Origin</p>
                     <h4>Development</h4>
                     <span class="icon icon-arrow"></span>
-                    {{view Ember.Select content=objectNames}}
+                    <label class="enviro-select">Selected Destination</label>
+                    {{view Ember.Select content=enviromentNames}}
                     <div class="number-obj-selected">
                         <span class="obj-number">0</span>
                         <span class="obj-number-txt">Objects have been selected for syncing</span>
@@ -200,12 +201,13 @@
                         {{input type="button" class="button btn btn-primary full-input" value="Sync Selected"}}
                     </div>
                 </div>
-                <div class="tab-pane fade" id="stage-sync">
+                <div class="sync-overlay" id="stage-sync" style="display:none;">
                     <a class="icon close-icon" href="javascript:void(0)">close</a>
                     <p class="orgin-txt">Origin</p>
                     <h4>Staging</h4>
                     <span class="icon icon-arrow"></span>
-                    {{view Ember.Select content=objectNames}}
+                    <label class="enviro-select">Selected Destination</label>
+                    {{view Ember.Select content=enviromentNames}}
                     <div class="number-obj-selected">
                         <span class="obj-number">0</span>
                         <span class="obj-number-txt">Objects have been selected for syncing</span>
@@ -213,12 +215,13 @@
                         {{input type="button" class="button btn btn-primary full-input" value="Sync Selected"}}
                     </div>
                 </div>
-                <div class="tab-pane fade" id="qa-sync">
+                <div class="sync-overlay" id="qa-sync" style="display:none;">
                     <a class="icon close-icon" href="javascript:void(0)">close</a>
                     <p class="orgin-txt">Origin</p>
                     <h4>QA</h4>
                     <span class="icon icon-arrow"></span>
-                    {{view Ember.Select content=objectNames}}
+                    <label class="enviro-select">Selected Destination</label>
+                    {{view Ember.Select content=enviromentNames}}
                     <div class="number-obj-selected">
                         <span class="obj-number">0</span>
                         <span class="obj-number-txt">Objects have been selected for syncing</span>
@@ -226,12 +229,13 @@
                         {{input type="button" class="button btn btn-primary full-input" value="Sync Selected"}}
                     </div>
                 </div>
-                <div class="tab-pane fade" id="prod-sync">
+                <div class="sync-overlay" id="prod-sync" style="display:none;">
                     <a class="icon close-icon" href="javascript:void(0)">close</a>
                     <p class="orgin-txt">Origin</p>
                     <h4>Production</h4>
                     <span class="icon icon-arrow"></span>
-                    {{view Ember.Select content=objectNames}}
+                    <label class="enviro-select">Selected Destination</label>
+                    {{view Ember.Select content=enviromentNames}}
                     <div class="number-obj-selected">
                         <span class="obj-number">0</span>
                         <span class="obj-number-txt">Objects have been selected for syncing</span>
