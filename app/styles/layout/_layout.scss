@@ -18,6 +18,7 @@ html, body {
   margin: 0;
   height: 100%;
   min-height: 100%;
+  background: url(../images/body-bg.png) top left repeat;
 }
 
 .ember-view, .full-height {
@@ -52,7 +53,7 @@ html, body {
 }
 
 .l-col-2 {
-  background: $gray_3;
+  background: $gray_4;
   @include respond-to('medium') {
     width: 360px;
   }

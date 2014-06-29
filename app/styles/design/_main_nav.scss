@@ -15,7 +15,7 @@
     li {
       float: left;
       display: inline-block;
-      margin-left: 2px;
+      border-right: 1px solid $gray_40;
       text-transform: uppercase;
       @include rem(1.2);
       a {
@@ -23,9 +23,10 @@
         padding: 10px 15px;
         background: $gray_1;
         display: block;
-        color: $white;
+        color: $gray_40;
         &.active {
           background: $orange;
+          color: $white;
         }
       }
     }
