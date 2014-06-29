@@ -1,15 +1,23 @@
 <div class="wrapper full-height">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
             <a class="navbar-brand" href="#">NowWhat</a>
         </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <div class="enviroment-tabs">
+            <ul class="enviroment-menu">
+                <li class="dev-menu-item">
+                    <a href="javascript:void(0)" id="dev-tab">Development</a>
+                </li>
+                <li class="stage-menu-item">
+                    <a href="javascript:void(0)" id="stage-tab">Staging</a>
+                </li>
+                <li class="qa-menu-item">
+                    <a href="javascript:void(0)" id="qa-tab">QA</a>
+                </li>
+                <li class="prod-menu-item">
+                    <a href="javascript:void(0)" id="prod-tab">Production</a>
+                </li>
+            </ul>
         </div>
     </nav>
     <div class="container full-height" id="main">
@@ -18,7 +26,7 @@
                 <div class="col-md-1 left-side-nav full-height">
                     <div class="sidebar-nav full-height">
                         <div class="icon-list">
-                            <ul class="nav nav-tabs" role="tablist" id="myTab">
+                            <ul class="nav nav-tabs inline" role="tablist" id="myTab">
                                 <li class="icon icon-index active">
                                     <a href="#index" role="tab" data-toggle="tab">
                                         <span class="tab-text">index</span>
