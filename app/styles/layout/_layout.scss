@@ -26,6 +26,7 @@
   }
 }
 .l-col {
+  position: relative;
   @include respond-to('medium') {
     display: table-cell;
     vertical-align: top;
@@ -34,14 +35,23 @@
 }
 
 .l-col-1 {
+  background: $gray_1;
   @include respond-to('medium') {
     width: 160px;
-    background: $gray_1;
   }
 }
 
 .l-col-2 {
+  background: $gray_3;
   @include respond-to('medium') {
     width: 360px;
   }
+}
+
+.main-content-outlet {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left:0;
+  right:0;
 }
