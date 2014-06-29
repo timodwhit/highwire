@@ -1,5 +1,6 @@
 .main-content {
   padding: 10px;
+  z-index: 0;
   @include respond-to('medium') {
     padding-top: 50px;
   }
