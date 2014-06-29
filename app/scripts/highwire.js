@@ -42,4 +42,22 @@ $(function() {
     }
   });
 
+  $(document).on('click', '.main-content-outlet .search-result', function(event) {
+    event.preventDefault();
+    var $clickObject = $(this);
+    var clickTitle = $clickObject.find('.object-title').text();
+    var clickJcode = $clickObject.find('span.jCode').text();
+    //loop through each search result and remove active class
+    $('.main-content-outlet .search-result').each(function(index, el) {
+      var $thisResult = $(this);
+      if ($thisResult.hasClass('active')) {
+        $thisResult.removeClass('active');
+      };
+    });
+    $('.icon-edit a').click();
+    $clickObject.addClass('active');
+    $('#edit #edit-domain').val(clickTitle);
+    $('#edit #edit-jcode').val(clickJcode);
+  });
+
 });
