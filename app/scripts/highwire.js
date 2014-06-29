@@ -1,8 +1,10 @@
 $(function() {
+
   $('#myTab a').click(function (e) {
     e.preventDefault()
     $(this).tab('show')
   });
+
   $('.draggable').draggable({
         scroll: false,
         revert: "invalid",
@@ -12,6 +14,7 @@ $(function() {
         appendTo: '.drop-zone',
         helper: 'clone'
     });
+
   $('.drop-zone').droppable({
     accept: '.draggable',
     drop: function (event, ui) {
@@ -24,4 +27,19 @@ $(function() {
        $(ui.draggable).removeClass('draggable ui-draggable');
     }
   });
+
+  $(document).on('change', '.sub-row .view-buttons input', function(event) {
+    event.preventDefault();
+    var checkedRadio = $('input:checked').attr('id');
+    if (checkedRadio == 'list-radio') {
+      $('.list-view').fadeIn(function() {
+        $('.canvas-view').addClass('overlay');
+      });
+    }else{
+      $('.list-view').fadeOut(function() {
+        $('.canvas-view').removeClass('overlay');
+      });
+    }
+  });
+
 });
