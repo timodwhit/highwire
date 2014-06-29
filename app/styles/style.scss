@@ -4,63 +4,12 @@
 @import 'design/design';
 $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 
-
-/* Put your CSS here */
-html, body {
-    margin: 30px 0;
-    height: 100%;
-}
-
 .ember-view, .full-height {
-  height: 98%;
+  height: 100%;
 }
 .main-content-outlet {
   z-index: -9;
 }
-#main{
-  .side-forms {
-    .search-results {
-      .search-result {
-        border: solid 1px black;
-        padding: 10px;
-        margin: 10px 0;
-        z-index: 999999;
-        cursor: move;
-        @include clear();
-        img {
-          max-width: 50px;
-          height: auto;
-        }
-      }
-    }
-    .button {
-      margin: 10px 0;
-      padding: 10px 0;
-    }
-    .full-input {
-      width: 100%;
-    }
-  }
-  .drop-zone {
-    height: 100%;
-    .search-result {
-      .logo-image{
-        background-color: gray;
-        @include border-radius(50%);
-        padding: 7px;
-        width: 55px;
-        img {
-          max-width: 40px;
-          height: auto;
-        }
-      }
-    }
-  }
-  .list-view{
-    @extend .drop-zone;
-  }
-}
-
 .ui-draggable-draging {
   z-index: 9;
 }
