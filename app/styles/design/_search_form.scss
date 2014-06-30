@@ -1,13 +1,13 @@
 .search-form {
   padding: 10px 15px;
-  background: #f3f3f3;
+  background: $white;
   margin-bottom: 20px;
 }
 
 .search-result {
   border: none;
   padding: 10px;
-  background: $gray_4;
+  background: #e0e0e0;
   margin-bottom: 3px;
   .logo-image {
     display: inline-block;
@@ -17,6 +17,10 @@
     border-radius: 50%;
     width: 49px;
   }
+  .icon-move {
+    float: right;
+    padding-top: 14px;
+  }
   img {
     max-width: 100%;
     width: 22px;
@@ -24,5 +28,18 @@
   // Search Results in the drop zone
   .drop-zone & {
     background: none;
+    .icon-move {
+      display: none;
+    }
+  }
+  .list-view &{
+    .icon-move {
+      display: none;
+    }
+  }
+  &.active {
+    .logo-image {
+      border-color: $orange;
+    }
   }
 }
