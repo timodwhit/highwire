@@ -1,8 +1,11 @@
 $(function () {
-  $('.main-menu li').click(function(event) {
+  $('.main-menu li.icon-dashboard, .main-menu li.icon-application').click(function(event) {
+    $('.main-menu li').each(function(index, el) {
+     $(this).removeClass('active');
+    });
     window.setTimeout(function(){
       location.reload();
-    }, 90);
+    }, 10);
   });
     $(document).ready(function() {
     var gaugeOptions = {

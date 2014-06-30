@@ -1,6 +1,12 @@
 Highwire.Router.map(function () {
   // Add your routes here
-  this.route("dashboard", {
-    path:"/dashboard"
+  this.route("build", {
+    path:"/build"
+  });
+  this.route("queue", {
+    path:"/queue"
+  });
+  this.route("logs", {
+    path:"/logs"
   });
 });
