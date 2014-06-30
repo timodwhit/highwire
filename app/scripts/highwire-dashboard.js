@@ -1,5 +1,5 @@
 $(function () {
-  $('nav .main-menu li').click(function(event) {
+  $('.main-menu li').click(function(event) {
     window.setTimeout(function(){
       location.reload();
     }, 90);
