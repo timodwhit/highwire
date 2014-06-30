@@ -50,7 +50,7 @@ $(function() {
         revert: "invalid",
         snap: ".search-results",
         stack: ".col-md-3",
-        zIndex: 99,
+        zIndex: 9999,
         appendTo: '.drop-zone',
         helper: 'clone'
     });
