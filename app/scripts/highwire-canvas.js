@@ -436,4 +436,12 @@ $(function() {
     setTimeout( progress, 2000 );
   });
 
+  $('#queue .progress-1').progressbar({
+      value: 77
+    });
+
+  $('#queue .progress-2').progressbar({
+      value: 37
+    });
+
 });

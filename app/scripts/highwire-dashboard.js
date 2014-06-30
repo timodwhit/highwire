@@ -5,7 +5,7 @@ $(function () {
     });
     window.setTimeout(function(){
       location.reload();
-    }, 10);
+    }, 1);
   });
     $(document).ready(function() {
     var gaugeOptions = {
