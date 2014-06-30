@@ -1,8 +1,8 @@
 $(function () {
-  $('nav .main-menu .icon-dashboard').click(function(event) {
+  $('nav .main-menu li').click(function(event) {
     window.setTimeout(function(){
       location.reload();
-    }, 100);
+    }, 90);
   });
     $(document).ready(function() {
     var gaugeOptions = {
