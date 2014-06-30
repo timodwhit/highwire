@@ -24,6 +24,7 @@ input,
 button,
 select,
 textarea {
+  padding: 5px;
   font-family: $form-font-family; // And only set font-family here for those that need it (note the missing label element)
 }
 
@@ -59,4 +60,46 @@ select {
 
 input[type="checkbox"] {
 
+}
+
+/**
+ * Select List
+ */
+.ember-select-list {
+  float: left;
+  width: 100%;
+  clear: both;
+  position: relative;
+  select {
+    width: 100%;
+    overflow: hidden;
+    @include appearance(none);
+    text-indent: 0.01px;
+    text-overflow: '';
+    position: relative;
+    padding: 5px;
+    color: rgba($black, .5);
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    right: 8px;
+    display: block;
+    z-index: 99;
+    content: '';
+    // Style
+    border-color: rgba($black, .3);
+    border-width: 5px;
+    border-style: solid;
+    border-right-color: transparent;
+    border-left-color: transparent;
+  }
+  &::before {
+    top: 3px;
+    border-top-color: transparent;
+  }
+  &::after {
+    top: 14px;
+    border-bottom-color: transparent;
+  }
 }

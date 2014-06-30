@@ -2,6 +2,16 @@
   padding: 10px 15px;
   background: $white;
   margin-bottom: 20px;
+  float: left;
+  width: 100%;
+  input {
+    float: right;
+    width: 63%;
+    padding: 5px 5px 3px;
+  }
+  .ember-select-list {
+    width: 35%;
+  }
 }
 
 .search-result {
