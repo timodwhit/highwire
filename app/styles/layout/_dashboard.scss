@@ -1,0 +1,38 @@
+.chart-area {
+  width: 100%;
+  @include respond-to('medium') {
+    width: 768px;
+    margin: 0 auto;
+  }
+  @include respond-to('large') {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.chart {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.chart-small {
+  @include respond-to('medium') {
+    float: right;
+    clear: right;
+    width: 280px;
+    margin-bottom: 10px;
+  }
+}
+
+.chart-large {
+  width: 100%;
+  @include respond-to('medium') {
+    width: 480px;
+  }
+  @include respond-to('large') {
+    width: 900px;
+  }
+}
+// .chart-small {
+//   width: 10%;
+// }
