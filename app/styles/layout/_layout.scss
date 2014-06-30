@@ -53,7 +53,7 @@ html, body {
 }
 
 .l-col-2 {
-  background: $gray_4;
+  background: #efefef;
   @include respond-to('medium') {
     width: 360px;
   }
@@ -68,4 +68,5 @@ html, body {
   bottom: 0;
   left:0;
   right:0;
+  z-index: -9;
 }

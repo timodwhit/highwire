@@ -7,9 +7,7 @@ $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 .ember-view, .full-height {
   height: 100%;
 }
-.main-content-outlet {
-  z-index: -9;
-}
+
 .ui-draggable-draging {
   z-index: 9;
 }
