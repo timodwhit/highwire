@@ -96,7 +96,7 @@ $(function() {
       $(this).removeClass('active');
     });
     $('.sidebar-nav .nav-tabs .object-action').fadeIn();
-    $('.icon-edit a').click();
+    $('.icon-pencil').closest('a').tab('show');
     $(".main-content-outlet .droppable-list .search-result .object-title")
       .each(function(index, el) {
       var $thisTitleItem = $(this);
@@ -126,7 +126,14 @@ $(function() {
     canvasName = enviroName + '-canvas',
     canvasId = '#' + canvasName,
     listName = enviroName + '-list-view',
-    listId = '#' + listName;
+    listId = '#' + listName,
+    enviromentTxt = $clickedTab.text(),
+    lowercaseEnviromentTxt = enviromentTxt.toLowerCase();
+    disabledOption = '#sync select option[value="'+lowercaseEnviromentTxt+'"]';
+    $('#sync .sync-title').text(enviromentTxt);
+    $('#sync select option').each(function(index, el) {
+      $(this).removeProp('disabled');
+    });
     $('.enviroment-menu li a').each(function(index, el) {
       var $thisA = $(this);
       if ($thisA.hasClass('active')) {
@@ -220,6 +227,10 @@ $(function() {
 
                 $(".main-content-outlet .drop-zone").append($thisObjectClone);
             });
+            $(".main-content-outlet .search-result.active").each(function(index, el) {
+              $(this).removeClass('active');
+            });
+            $('#myTab a:first').tab('show');
           }
         });
 
@@ -345,6 +356,10 @@ $(function() {
             });
           };
         });
+        $(".main-content-outlet .search-result.active").each(function(index, el) {
+          $(this).removeClass('active');
+        });
+        $('#myTab a:first').tab('show');
       }
     });
 
@@ -370,41 +385,26 @@ $(function() {
     }
   });
 
-  //sync events show
-  $('#sync input').click(function(event) {
-    /* Act on the event */
-    event.preventDefault();
-    $('.sync-overlay').hide();
-    var $thisBtn = $(this);
-    var thisBtnId = $thisBtn.attr('id');
-    var thisBtnVal = $thisBtn.val();
-    var tabId = '#'+thisBtnId +'-sync';
-    $(tabId).fadeIn();
-    $(tabId).find('.ember-select').val(thisBtnVal);
-  });
-
   //sync event
-  $(document).on('click', '.sync-overlay input[value="Sync Selected"]', function(event) {
+  $(document).on('click', '#sync input[value="Sync Selected"]', function(event) {
     event.preventDefault();
     /* Act on the event */
     var $clickedSync = $(this);
-    var $closestSelect = $(this).closest('.sync-overlay').find('.ember-select');
+    var $closestSelect = $(this).closest('#sync').find('.ember-select');
     var selectValue = $closestSelect.val();
     var lowerCaseVal = selectValue.toLowerCase();
-    var progressbarId = '#'+ lowerCaseVal + '-sync-progressbar';
     var cloneToList = ".main-content-outlet ."+lowerCaseVal+"-list .list-view-list";
     var cloneToCanvas = ".main-content-outlet ."+lowerCaseVal+"-canvas";
-    var progressbar = $( progressbarId ),
-        progressLabel = progressbar.closest( ".progress-label" );
-        progressbar.fadeIn();
-    progressbar.progressbar({
+    var $progressbar = $( '#sync-progressbar' ),
+        $progressLabel = $progressbar.find( ".progress-label" );
+    $progressbar.fadeIn();
+    $progressbar.progressbar({
       value: false,
       change: function() {
-        progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+        $progressLabel.text( $progressbar.progressbar( "value" ) + "%" );
       },
       complete: function() {
-        progressbar.fadeOut();
-        $clickedSync.closest('.sync-overlay').fadeOut();
+        $progressbar.fadeOut();
         $(".main-content-outlet .droppable-list .search-result.active")
           .each(function(index, el) {
             var $thisListObject = $(this);
@@ -419,24 +419,21 @@ $(function() {
             var $thisSelectedClone = $thisSelectedObject.clone();
             $(cloneToCanvas).append($thisSelectedClone);
           });
+          $(".main-content-outlet .search-result.active").each(function(index, el) {
+              $(this).removeClass('active');
+            });
+          $('#myTab a:first').tab('show');
         }
       });
 
     function progress() {
-      var val = progressbar.progressbar( "value" ) || 0;
-      progressbar.progressbar( "value", val + Math.floor( Math.random() * 3 ) );
+      var val = $progressbar.progressbar( "value" ) || 0;
+      $progressbar.progressbar( "value", val + Math.floor( Math.random() * 3 ) );
       if ( val <= 99 ) {
         progressTimer = setTimeout( progress, 50 );
       }
     }
     setTimeout( progress, 2000 );
-  });
-
-  //sync overlay close
-  $('.sync-overlay .close-icon, .sync-overlay input[value="Cancel"]').click(function(event) {
-    /* Act on the event */
-    event.preventDefault();
-    $(this).closest('.sync-overlay').fadeOut();
   });
 
 });
