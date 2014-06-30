@@ -69,7 +69,7 @@ $(function () {
           min: 0,
           max: 200,
           title: {
-              text: 'Speed'
+              text: 'AVG Load'
           }
       },
 
@@ -78,15 +78,15 @@ $(function () {
       },
 
       series: [{
-          name: 'Speed',
+          name: 'AVG Load',
           data: [80],
           dataLabels: {
             format: '<div style="text-align:center"><span style="font-size:25px;color:' +
                     ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
-                    '<span style="font-size:12px;color:silver">km/h</span></div>'
+                    '<span style="font-size:12px;color:silver">* 1000 / min</span></div>'
           },
           tooltip: {
-              valueSuffix: ' km/h'
+              valueSuffix: ''
           }
       }]
 
@@ -98,12 +98,12 @@ $(function () {
           min: 0,
           max: 5,
           title: {
-              text: 'RPM'
+              text: 'Responce Time'
           }
       },
 
       series: [{
-          name: 'RPM',
+          name: 'Responce Time',
           data: [1],
           dataLabels: {
             format: '<div style="text-align:center"><span style="font-size:25px;color:' +
@@ -160,7 +160,7 @@ $(function () {
                 zoomType: 'x'
             },
             title: {
-                text: 'USD to EUR exchange rate from 2006 through 2008'
+                text: 'Server Performance Over Time'
             },
             subtitle: {
                 text: document.ontouchstart === undefined ?
@@ -173,7 +173,7 @@ $(function () {
             },
             yAxis: {
                 title: {
-                    text: 'Exchange rate'
+                    text: 'Responce Time'
                 }
             },
             legend: {
@@ -203,7 +203,7 @@ $(function () {
 
             series: [{
                 type: 'area',
-                name: 'USD to EUR',
+                name: 'Responce Time',
                 pointInterval: 24 * 3600 * 1000,
                 pointStart: Date.UTC(2006, 0, 01),
                 data: [
@@ -368,7 +368,7 @@ $(function () {
                 }
             },
             series: [{
-                name: 'Use',
+                name: 'Used',
                 data: [null, null, null, null, null, 6 , 11, 32, 110, 235, 369, 640,
                     1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468, 20434, 24126,
                     27387, 29459, 31056, 31982, 32040, 31233, 29224, 27342, 26662,
