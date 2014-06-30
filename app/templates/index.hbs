@@ -71,11 +71,13 @@
                         <div class="search-form">
                             <div class="select-search">
                                 <div class="ember-select-list">
-                                    {{view Ember.Select content=objectNames}}
+                                    <select id="ember329" class="ember-view ember-select">
+                                      <option value="sites">Sites</option>
+                                      <option value="other">Other</option>
+                                    </select>
                                 </div>
-                                {{input type="text" placeholder="Search" size="25"}}
+                                <!--{{input type="submit" value="search" class="button btn btn-primary full-input"}}-->
                             </div>
-                            <!--{{input type="submit" value="search" class="button btn btn-primary full-input"}}-->
                         </div>
                     </div>
                     <p>To add components, drag to canvas on the right.</p>
@@ -372,7 +374,6 @@
   <ul class="list-view-list">
 
   </ul>
-</div>
 </div>
 </div>
 </div>
