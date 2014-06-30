@@ -179,6 +179,20 @@ $(function() {
         },
         complete: function() {
           progressbar.fadeOut();
+          $(".main-content-outlet .droppable-list .search-result.active")
+              .each(function(index, el) {
+              var $thisListObject = $(this);
+              $thisListObject.removeClass('active');
+              var thisObjectClone = $thisListObject.clone();
+              $(".main-content-outlet .droppable-list .list-view-list").append(thisObjectClone);
+            });
+          $(".main-content-outlet .drop-zone .search-result.active")
+              .each(function(index, el) {
+              var $thisListObject = $(this);
+              $thisListObject.removeClass('active');
+              var $thisObjectClone = $thisListObject.clone().removeAttr('style');
+              $(".main-content-outlet .drop-zone").append($thisObjectClone);
+            });
         }
       });
 
@@ -304,7 +318,7 @@ $(function() {
   });
 
   //sync overlay close
-  $('.sync-overlay .close-icon').click(function(event) {
+  $('.sync-overlay .close-icon, .sync-overlay input[value="Sync Selected"]').click(function(event) {
     /* Act on the event */
     event.preventDefault();
     $(this).closest('.sync-overlay').fadeOut();
