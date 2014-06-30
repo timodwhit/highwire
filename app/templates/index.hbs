@@ -1,3 +1,324 @@
+<div class="enviroment-tabs">
+    <ul class="enviroment-menu">
+        <li class="dev-menu-item">
+            <a href="javascript:void(0)" id="dev-tab" class="active">Development</a>
+        </li>
+        <li class="stage-menu-item">
+            <a href="javascript:void(0)" id="stage-tab">Staging</a>
+        </li>
+        <li class="qa-menu-item">
+            <a href="javascript:void(0)" id="qa-tab">QA</a>
+        </li>
+        <li class="prod-menu-item">
+            <a href="javascript:void(0)" id="prod-tab">Production</a>
+        </li>
+    </ul>
+</div>
+<div class="l-col l-col-1 left-side-nav">
+            <div class="sidebar-nav">
+                <div class="icon-list">
+                    <ul class="nav nav-tabs" role="tablist" id="myTab">
+                        <li class="active">
+                            <a href="#index" role="tab" data-toggle="tab">
+                                <span class="icon icon-stack"></span>
+                                <span class="tab-text">Objects</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#new" role="tab" data-toggle="tab">
+                                <span class="icon icon-plus"></span>
+                                <span class="tab-text">Create Objects</span>
+                            </a>
+                        </li>
+                        <li class="object-action" style="display: none;">
+                            <a href="#edit" role="tab" data-toggle="tab">
+                                <span class="icon icon-pencil"></span>
+                                <span class="tab-text">Edit Object</span>
+                            </a>
+                        </li>
+                        <li class="object-action" style="display: none;">
+                            <a href="#sync" role="tab" data-toggle="tab">
+                                <span class="icon icon-spinner"></span>
+                                <span class="tab-text">sync</span>
+                            </a>
+                        </li>
+                        <li class="object-action" style="display: none;">
+                            <a href="#backup" role="tab" data-toggle="tab">
+                                <span class="icon icon-cloud-upload"></span>
+                                <span class="tab-text">backup</span>
+                            </a>
+                        </li>
+                        <li class="object-action" style="display: none;">
+                            <a href="#clone" role="tab" data-toggle="tab">
+                                <span class="icon icon-cube4"></span>
+                                <span class="tab-text">clone</span>
+                            </a>
+                        </li>
+                        <li class="object-action" style="display: none;">
+                            <a href="#delete" role="tab" data-toggle="tab">
+                                <span class="icon icon-close"></span>
+                                <span class="tab-text">delete</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="l-col l-col-2 side-forms">
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="index">
+                    <div class="search-form">
+                        <div class="select-search">
+                            {{view Ember.Select content=objectNames}}
+                            {{input type="text" placeholder="Search" size="25"}}
+                        </div>
+                        <!--{{input type="submit" value="search" class="button btn btn-primary full-input"}}-->
+                    </div>
+                    <p>To add components, drag to canvas on the right.</p>
+                    <div class="search-results">
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                                <img class="image drupal" src="images/drupal.png"/>
+                            </div>
+                            <span class="object-title" data-role="title01">title01.com</span>
+                            <span class="icon icon-move"></span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div>
+                        </div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                            <div class="logo-image">
+                                <img class="image drupal" src="images/drupal.png"/>
+                            </div>
+                            <span class="object-title" data-role="title02">title02.com</span>
+                            <span class="icon icon-move"></span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div>
+                        </div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                          <div class="logo-image">
+                                <img class="image drupal" src="images/drupal.png"/>
+                            </div>
+                            <span class="object-title" data-role="title03">title03.com</span>
+                            <span class="icon icon-move"></span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div>
+                        </div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                            <div class="logo-image">
+                              <img class="image drupal" src="images/drupal.png"/>
+                            </div>
+                            <span class="object-title" data-role="title04">title04.com</span>
+                            <span class="icon icon-move"></span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div>
+                        </div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                            <div class="logo-image">
+                                <img class="image drupal" src="images/drupal.png"/>
+                            </div>
+                            <span class="object-title" data-role="title05">title05.com</span>
+                            <span class="icon icon-move"></span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div>
+                        </div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                            <div class="logo-image">
+                                <img class="image drupal" src="images/drupal.png"/>
+                            </div>
+                            <span class="object-title" data-role="title06">title06.com</span>
+                            <span class="icon icon-move"></span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div>
+                        </div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                            <div class="logo-image">
+                                <img class="image drupal" src="images/drupal.png"/>
+                            </div>
+                            <span class="object-title" data-role="title07">title07.com</span>
+                            <span class="icon icon-move"></span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div>
+                        </div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                            <div class="logo-image">
+                                <img class="image drupal" src="images/drupal.png"/>
+                            </div>
+                            <span class="object-title" data-role="title08">title08.com</span>
+                            <span class="icon icon-move"></span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div>
+                        </div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                            <div class="logo-image">
+                                <img class="image drupal" src="images/drupal.png"/>
+                            </div>
+                            <span class="object-title" data-role="title09">title09.com</span>
+                            <span class="icon icon-move"></span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div>
+                        </div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                            <div class="logo-image">
+                                <img class="image drupal" src="images/drupal.png"/>
+                            </div>
+                            <span class="object-title" data-role="title10">title10.com</span>
+                            <span class="icon icon-move"></span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div>
+                        </div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                            <div class="logo-image">
+                                <img class="image drupal" src="images/drupal.png"/>
+                            </div>
+                            <span class="object-title" data-role="title11">title11.com</span>
+                            <span class="icon icon-move"></span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div>
+                        </div>
+                        <div class="search-result-wrapper">
+                        <div class="search-result draggable">
+                            <div class="logo-image">
+                                <img class="image drupal" src="images/drupal.png"/>
+                            </div>
+                            <span class="object-title" data-role="title12">title12.com</span>
+                            <span class="icon icon-move"></span>
+                            <span class="jCode" style="display: none;">jAbc</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="new">
+                    <label for="new-domain">Domain Name</label>
+                    {{input type="text" class="full-input" id="new-domain" value="domain" placeholder="Domain"}}
+                    <label for="new-jcode">jCode</label>
+                    {{input type="text" class="full-input" id="new-jcode" value="jcode" placeholder="jCode"}}
+                </div>
+                <div class="tab-pane fade" id="edit">
+                    <label for="edit-domain">Domain Name</label>
+                    {{input type="text" class="full-input" id="edit-domain" value="domain" placeholder="Domain"}}
+                    <label for="edit-jcode">jCode</label>
+                    {{input type="text" class="full-input" id="edit-jcode" value="jcode" placeholder="jCode"}}
+                </div>
+                <div class="tab-pane fade" id="sync">
+                    {{input type="button" class="button btn btn-primary full-input" disabled="disabled" id="dev" value="Development"}}
+                    {{input type="button" class="button btn btn-primary full-input" id="stage" value="Staging"}}
+                    {{input type="button" class="button btn btn-primary full-input" id="qa" value="QA"}}
+                    {{input type="button" class="button btn btn-primary full-input" id="prod" value="Production"}}
+                </div>
+                <div class="sync-overlay" id="dev-sync" style="display:none;">
+                    <a class="icon close-icon" href="javascript:void(0)">close</a>
+                    <p class="orgin-txt">Origin</p>
+                    <h4>Development</h4>
+                    <span class="icon icon-arrow"></span>
+                    <label class="enviro-select">Selected Destination</label>
+                    {{view Ember.Select content=enviromentNames}}
+                    <div class="number-obj-selected">
+                        <span class="obj-number">0</span>
+                        <span class="obj-number-txt">Objects have been selected for syncing</span>
+                    </div>
+
+                        {{input type="button" class="button btn btn-primary full-input" value="Cancel"}}
+                        {{input type="button" class="button btn btn-primary full-input" value="Sync Selected"}}
+                        <div id="development-sync-progressbar" style="display:none;"><div class="progress-label">Syncing...</div>
+                        </div>
+
+                </div>
+                <div class="sync-overlay" id="stage-sync" style="display:none;">
+                    <a class="icon close-icon" href="javascript:void(0)">close</a>
+                    <p class="orgin-txt">Origin</p>
+                    <h4>Staging</h4>
+                    <span class="icon icon-arrow"></span>
+                    <label class="enviro-select">Selected Destination</label>
+                    {{view Ember.Select content=enviromentNames}}
+                    <div class="number-obj-selected">
+                        <span class="obj-number">0</span>
+                        <span class="obj-number-txt">Objects have been selected for syncing</span>
+                    </div>
+
+                        {{input type="button" class="button btn btn-primary full-input" value="Cancel"}}
+                        {{input type="button" class="button btn btn-primary full-input" value="Sync Selected"}}
+                        <div id="staging-sync-progressbar" style="display:none;"><div class="progress-label">Syncing...</div>
+                        </div>
+
+                </div>
+                <div class="sync-overlay" id="qa-sync" style="display:none;">
+                    <a class="icon close-icon" href="javascript:void(0)">close</a>
+                    <p class="orgin-txt">Origin</p>
+                    <h4>QA</h4>
+                    <span class="icon icon-arrow"></span>
+                    <label class="enviro-select">Selected Destination</label>
+                    {{view Ember.Select content=enviromentNames}}
+                    <div class="number-obj-selected">
+                        <span class="obj-number">0</span>
+                        <span class="obj-number-txt">Objects have been selected for syncing</span>
+                    </div>
+
+                        {{input type="button" class="button btn btn-primary full-input" value="Cancel"}}
+                        {{input type="button" class="button btn btn-primary full-input" value="Sync Selected"}}
+                        <div id="qa-sync-progressbar" style="display:none;"><div class="progress-label">Syncing...</div>
+                        </div>
+
+                </div>
+                <div class="sync-overlay" id="prod-sync" style="display:none;">
+                    <a class="icon close-icon" href="javascript:void(0)">close</a>
+                    <p class="orgin-txt">Origin</p>
+                    <h4>Production</h4>
+                    <span class="icon icon-arrow"></span>
+                    <label class="enviro-select">Selected Destination</label>
+                    {{view Ember.Select content=enviromentNames}}
+                    <div class="number-obj-selected">
+                        <span class="obj-number">0</span>
+                        <span class="obj-number-txt">Objects have been selected for syncing</span>
+                    </div>
+
+                        {{input type="button" class="button btn btn-primary full-input" value="Cancel"}}
+                        {{input type="button" class="button btn btn-primary full-input" value="Sync Selected"}}
+                        <div id="production-sync-progressbar" style="display:none;"><div class="progress-label">Syncing...</div>
+                        </div>
+
+                </div>
+                <div class="tab-pane fade" id="backup">
+                    {{input type="button" class="button btn btn-primary full-input backup-btn" value="backup"}}
+                    <div id="backup-progressbar" style="display:none;"><div class="progress-label">Creating Backup...</div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="clone">
+                    {{input type="button" class="button btn btn-primary full-input clone-btn" value="clone"}}
+                    <div id="clone-progressbar" style="display:none;"><div class="progress-label">Cloning...</div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="delete">
+                    <div id="delete-dialog" title="Delete Object">
+                      <div class="delete-progress-label">Starting deletion...</div>
+                      <div id="delete-progressbar"></div>
+                    </div>
+                    {{input type="button" class="button btn btn-primary full-input delete-btn" value="delete from server"}}
+                    <div id="delete-progressbar" style="display:none;"><div class="progress-label">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="l-col l-col-3 main-content">
+          <div class="btn-group view-buttons" data-toggle="buttons">
+              <label class="btn btn-primary active">
+                <input type="radio" name="options" id="canvas-radio" checked> Canvas View </input>
+              </label>
+              <label class="btn btn-primary">
+                <input type="radio" name="options" id="list-radio"> List View </input>
+              </label>
+          </div>
+          <div class="main-content-outlet">
 <div class="well drop-zone canvas-view active development-canvas" id="dev-canvas">
 
 </div>
@@ -33,4 +354,6 @@
   <ul class="list-view-list">
 
   </ul>
+</div>
+</div>
 </div>
