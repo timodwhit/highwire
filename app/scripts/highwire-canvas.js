@@ -15,6 +15,29 @@ $.fn.outerHTML = function(){
 
 $(function() {
 
+  //search event
+  $('.ember-text-field').keyup(function(event) {
+    event.preventDefault();
+    var searchVal = $('.search-form .select-search .ember-text-field').val();
+    if (searchVal.length) {
+      $('#index .search-results .search-result ').each(function(index, el) {
+        var $thisResult = $(this);
+        $thisResult.fadeOut();
+        var thisResultTitle = $thisResult.find('.object-title').text();
+        if (thisResultTitle.toLowerCase().indexOf(searchVal) >= 0) {
+          $thisResult.fadeIn();
+        }
+      });
+    } else {
+      $('#index .search-results .search-result ').each(function(index, el) {
+        var $thisResult = $(this);
+        $thisResult.fadeIn();
+      });
+    }
+  });
+  $('.search-form input[value="search"]').click(function(event) {
+    $('.ember-text-field').keyup();
+  });
   //side tabs
   $('#myTab a').click(function (e) {
     e.preventDefault()
@@ -72,7 +95,7 @@ $(function() {
     $('.main-content-outlet .search-result.active').each(function(index, el) {
       $(this).removeClass('active');
     });
-
+    $('.sidebar-nav .nav-tabs .object-action').fadeIn();
     $('.icon-edit a').click();
     $(".main-content-outlet .droppable-list .search-result .object-title")
       .each(function(index, el) {
@@ -364,14 +387,11 @@ $(function() {
 
     function progress() {
       var val = progressbar.progressbar( "value" ) || 0;
-
       progressbar.progressbar( "value", val + Math.floor( Math.random() * 3 ) );
-
       if ( val <= 99 ) {
         progressTimer = setTimeout( progress, 50 );
       }
     }
-
     setTimeout( progress, 2000 );
   });
 

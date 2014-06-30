@@ -27,30 +27,35 @@
                     <ul class="nav nav-tabs" role="tablist" id="myTab">
                         <li class="icon icon-index active">
                             <a href="#index" role="tab" data-toggle="tab">
-                                <span class="tab-text">index</span>
+                                <span class="tab-text">Objects</span>
                             </a>
                         </li>
                         <li class="icon icon-new">
                             <a href="#new" role="tab" data-toggle="tab">
-                                <span class="tab-text">new</span>
+                                <span class="tab-text">Create Objects</span>
                             </a>
                         </li>
-                        <li class="icon icon-edit">
+                        <li class="icon icon-edit object-action" style="display: none;">
                             <a href="#edit" role="tab" data-toggle="tab">
-                                <span class="tab-text">edit</span>
+                                <span class="tab-text">Edit Object</span>
                             </a>
                         </li>
-                        <li class="icon icon-sync">
+                        <li class="icon icon-sync object-action" style="display: none;">
                             <a href="#sync" role="tab" data-toggle="tab">
                                 <span class="tab-text">sync</span>
                             </a>
                         </li>
-                        <li class="icon icon-clone">
+                        <li class="icon icon-backup object-action" style="display: none;">
+                            <a href="#backup" role="tab" data-toggle="tab">
+                                <span class="tab-text">backup</span>
+                            </a>
+                        </li>
+                        <li class="icon icon-clone object-action" style="display: none;">
                             <a href="#clone" role="tab" data-toggle="tab">
                                 <span class="tab-text">clone</span>
                             </a>
                         </li>
-                        <li class="icon icon-delete">
+                        <li class="icon icon-delete object-action" style="display: none;">
                             <a href="#delete" role="tab" data-toggle="tab">
                                 <span class="tab-text">delete</span>
                             </a>
@@ -65,9 +70,9 @@
                     <div class="search-form">
                         <div class="select-search">
                             {{view Ember.Select content=objectNames}}
-                            {{input type="text" value="search" placeholder="Search" size="25"}}
+                            {{input type="text" placeholder="Search" size="25"}}
                         </div>
-                        {{input type="submit" value="search" class="button btn btn-primary full-input"}}
+                        <!--{{input type="submit" value="search" class="button btn btn-primary full-input"}}-->
                     </div>
                     <p>To add components, drag to canvas on the right.</p>
                     <div class="search-results">
@@ -254,6 +259,10 @@
                         {{input type="button" class="button btn btn-primary full-input" value="Sync Selected"}}
                         <div id="production-sync-progressbar" style="display:none;"><div class="progress-label">Syncing...</div></div>
 
+                </div>
+                <div class="tab-pane fade" id="backup">
+                    {{input type="button" class="button btn btn-primary full-input backup-btn" value="backup"}}
+                    <div id="backup-progressbar" style="display:none;"><div class="progress-label">Creating Backup...</div></div>
                 </div>
                 <div class="tab-pane fade" id="clone">
                     {{input type="button" class="button btn btn-primary full-input clone-btn" value="clone"}}
