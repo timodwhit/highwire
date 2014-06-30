@@ -1,11 +1,24 @@
 <div class="chart-area">
-  <div id="zoom-chart-container" class="chart chart-large"style="min-width: 310px; height: 400px;"></div>
-  <div id="inactive-chart-container" class="chart chart-small"style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-  <div id="db-chart-container" class="chart chart-small"style="min-width: 310px; height: 400px;"></div>
-  <div id="container-speed" class="chart chart-small"style=" height: 200px;"></div>
-  <div id="container-rpm" class="chart chart-small"style=" height: 200px;"></div>
-  <div id="mulit-chart-container" class="chart chart-small"style=" height: 400px;"></div>
-  <div id="alerts" >
+  <div id="zoom-chart-container" class="chart chart-large"style="min-width: 310px; height: 555px;"></div>
+  <div class="chart chart-small">
+    <div id="inactive-chart-container" style="min-width: 280px; height: 200px;"></div>
+    <div class="info-box">
+      <span class="info--number">5</span>
+      <span class="info--text">Inactive for the last 30 days</span>
+      <span class="btn">View</span>
+    </div>
+  </div>
+  <div class="chart chart-small">
+    <div id="db-chart-container" style="min-width: 280px; height: 200px;"></div>
+    <div class="info-box">
+      <span class="info--number">2</span>
+      <span class="info--text">Database capacity warnings</span>
+      <span class="btn">View</span>
+    </div>
+  </div>
+  <div id="container-speed" class="chart chart-medium odd"style=" height: 200px;"></div>
+  <div id="container-rpm" class="chart chart-medium even"style=" height: 200px;"></div>
+  <div id="alerts-chart" class="chart chart-small">
     <ul class="alert-list">
       <li class="low alert">Alert Title</li>
       <li class="medium alert">Alert Title</li>

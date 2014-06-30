@@ -9,30 +9,59 @@
     margin: 0 auto;
   }
 }
-
+// Chart Sizes
+$large-chart-large: 885px;
+$medium-chart-large: 425px;
+$chart-margin: 35px;
+// Chart Layout
 .chart {
   float: left;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  @include respond-to('medium') {
+    margin-bottom: 0;
+    margin-top: $chart-margin;
+  }
 }
 .chart-small {
   @include respond-to('medium') {
-    float: right;
     clear: right;
-    width: 280px;
-    margin-bottom: 10px;
+    width: 768 - $medium-chart-large -$chart-margin;
+    margin-top: $chart-margin;
+  }
+  @include respond-to('large') {
+    width: 1200 - $large-chart-large - $chart-margin;
+  }
+}
+
+.chart-medium {
+  @include respond-to('medium') {
+    width: (767px - $chart-margin)/2;
+    margin-right: $chart-margin + 1;
+    &.even {
+      margin-right: 0;
+    }
+  }
+  @include respond-to('large') {
+    width: ($large-chart-large - $chart-margin)/2;
+    margin-right: $chart-margin;
+    &.even {
+      margin-right: $chart-margin;
+    }
   }
 }
 
 .chart-large {
   width: 100%;
   @include respond-to('medium') {
-    width: 480px;
+    width: $medium-chart-large;
+    margin-right: $chart-margin;
   }
   @include respond-to('large') {
-    width: 900px;
+    width: $large-chart-large;
   }
 }
-// .chart-small {
-//   width: 10%;
-// }
+
+
+
+

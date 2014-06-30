@@ -1,0 +1,28 @@
+.chart-small {
+  .info-box {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    background: $gray_1;
+    color: $white;
+    .btn {
+      padding-top: 5px;
+      background: $orange;
+    }
+    span {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+  .info--number {
+    @include rem(4.0);
+    padding-right: 10px;
+  }
+  .info--text {
+    vertical-align: top;
+    padding-top: 5px;
+    width: 150px;
+    font-style: italic;
+  }
+}
+
