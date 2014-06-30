@@ -1,8 +1,11 @@
 <div class="wrapper full-height">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">NowWhat</a>
-        </div>
+      <ul class="main-menu">
+        <li>
+            <a href="#">Application</a>
+        </li>
+        {{#link-to 'dashboard' tagName='li'}}Dashboard{{/link-to}}
+      </ul>
         <div class="enviroment-tabs">
             <ul class="enviroment-menu">
                 <li class="dev-menu-item">
@@ -83,7 +86,8 @@
                         </div>
                             <span class="object-title" data-role="title01">title01.com</span>
                             <span class="jCode" style="display: none;">jAbc</span>
-                        </div></div>
+                        </div>
+                        </div>
                         <div class="search-result-wrapper">
                         <div class="search-result draggable">
                           <div class="logo-image">
@@ -91,7 +95,8 @@
                         </div>
                             <span class="object-title" data-role="title02">title02.com</span>
                             <span class="jCode" style="display: none;">jAbc</span>
-                        </div></div>
+                        </div>
+                        </div>
                         <div class="search-result-wrapper">
                         <div class="search-result draggable">
                           <div class="logo-image">
@@ -99,7 +104,8 @@
                         </div>
                             <span class="object-title" data-role="title03">title03.com</span>
                             <span class="jCode" style="display: none;">jAbc</span>
-                        </div></div>
+                        </div>
+                        </div>
                         <div class="search-result-wrapper">
                         <div class="search-result draggable">
                           <div class="logo-image">
@@ -107,7 +113,8 @@
                         </div>
                             <span class="object-title" data-role="title04">title04.com</span>
                             <span class="jCode" style="display: none;">jAbc</span>
-                        </div></div>
+                        </div>
+                        </div>
                         <div class="search-result-wrapper">
                         <div class="search-result draggable">
                           <div class="logo-image">
@@ -115,7 +122,8 @@
                         </div>
                             <span class="object-title" data-role="title05">title05.com</span>
                             <span class="jCode" style="display: none;">jAbc</span>
-                        </div></div>
+                        </div>
+                        </div>
                         <div class="search-result-wrapper">
                         <div class="search-result draggable">
                           <div class="logo-image">
@@ -123,7 +131,8 @@
                         </div>
                             <span class="object-title" data-role="title06">title06.com</span>
                             <span class="jCode" style="display: none;">jAbc</span>
-                        </div></div>
+                        </div>
+                        </div>
                         <div class="search-result-wrapper">
                         <div class="search-result draggable">
                           <div class="logo-image">
@@ -131,7 +140,8 @@
                         </div>
                             <span class="object-title" data-role="title07">title07.com</span>
                             <span class="jCode" style="display: none;">jAbc</span>
-                        </div></div>
+                        </div>
+                        </div>
                         <div class="search-result-wrapper">
                         <div class="search-result draggable">
                           <div class="logo-image">
@@ -139,7 +149,8 @@
                         </div>
                             <span class="object-title" data-role="title08">title08.com</span>
                             <span class="jCode" style="display: none;">jAbc</span>
-                        </div></div>
+                        </div>
+                        </div>
                         <div class="search-result-wrapper">
                         <div class="search-result draggable">
                           <div class="logo-image">
@@ -147,7 +158,8 @@
                         </div>
                             <span class="object-title" data-role="title09">title09.com</span>
                             <span class="jCode" style="display: none;">jAbc</span>
-                        </div></div>
+                        </div>
+                        </div>
                         <div class="search-result-wrapper">
                         <div class="search-result draggable">
                           <div class="logo-image">
@@ -155,7 +167,8 @@
                         </div>
                             <span class="object-title" data-role="title10">title10.com</span>
                             <span class="jCode" style="display: none;">jAbc</span>
-                        </div></div>
+                        </div>
+                        </div>
                         <div class="search-result-wrapper">
                         <div class="search-result draggable">
                           <div class="logo-image">
@@ -163,7 +176,8 @@
                         </div>
                             <span class="object-title" data-role="title11">title11.com</span>
                             <span class="jCode" style="display: none;">jAbc</span>
-                        </div></div>
+                        </div>
+                        </div>
                         <div class="search-result-wrapper">
                         <div class="search-result draggable">
                           <div class="logo-image">
@@ -171,7 +185,8 @@
                         </div>
                             <span class="object-title" data-role="title12">title12.com</span>
                             <span class="jCode" style="display: none;">jAbc</span>
-                        </div></div>
+                        </div>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="new">
@@ -206,7 +221,8 @@
 
                         {{input type="button" class="button btn btn-primary full-input" value="Cancel"}}
                         {{input type="button" class="button btn btn-primary full-input" value="Sync Selected"}}
-                        <div id="development-sync-progressbar" style="display:none;"><div class="progress-label">Syncing...</div></div>
+                        <div id="development-sync-progressbar" style="display:none;"><div class="progress-label">Syncing...</div>
+                        </div>
 
                 </div>
                 <div class="sync-overlay" id="stage-sync" style="display:none;">
@@ -223,7 +239,8 @@
 
                         {{input type="button" class="button btn btn-primary full-input" value="Cancel"}}
                         {{input type="button" class="button btn btn-primary full-input" value="Sync Selected"}}
-                        <div id="staging-sync-progressbar" style="display:none;"><div class="progress-label">Syncing...</div></div>
+                        <div id="staging-sync-progressbar" style="display:none;"><div class="progress-label">Syncing...</div>
+                        </div>
 
                 </div>
                 <div class="sync-overlay" id="qa-sync" style="display:none;">
@@ -240,7 +257,8 @@
 
                         {{input type="button" class="button btn btn-primary full-input" value="Cancel"}}
                         {{input type="button" class="button btn btn-primary full-input" value="Sync Selected"}}
-                        <div id="qa-sync-progressbar" style="display:none;"><div class="progress-label">Syncing...</div></div>
+                        <div id="qa-sync-progressbar" style="display:none;"><div class="progress-label">Syncing...</div>
+                        </div>
 
                 </div>
                 <div class="sync-overlay" id="prod-sync" style="display:none;">
@@ -257,16 +275,19 @@
 
                         {{input type="button" class="button btn btn-primary full-input" value="Cancel"}}
                         {{input type="button" class="button btn btn-primary full-input" value="Sync Selected"}}
-                        <div id="production-sync-progressbar" style="display:none;"><div class="progress-label">Syncing...</div></div>
+                        <div id="production-sync-progressbar" style="display:none;"><div class="progress-label">Syncing...</div>
+                        </div>
 
                 </div>
                 <div class="tab-pane fade" id="backup">
                     {{input type="button" class="button btn btn-primary full-input backup-btn" value="backup"}}
-                    <div id="backup-progressbar" style="display:none;"><div class="progress-label">Creating Backup...</div></div>
+                    <div id="backup-progressbar" style="display:none;"><div class="progress-label">Creating Backup...</div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="clone">
                     {{input type="button" class="button btn btn-primary full-input clone-btn" value="clone"}}
-                    <div id="clone-progressbar" style="display:none;"><div class="progress-label">Cloning...</div></div>
+                    <div id="clone-progressbar" style="display:none;"><div class="progress-label">Cloning...</div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="delete">
                     <div id="delete-dialog" title="Delete Object">
@@ -274,7 +295,8 @@
                       <div id="delete-progressbar"></div>
                     </div>
                     {{input type="button" class="button btn btn-primary full-input delete-btn" value="delete from server"}}
-                    <div id="delete-progressbar" style="display:none;"><div class="progress-label">Loading...</div></div>
+                    <div id="delete-progressbar" style="display:none;"><div class="progress-label">Loading...</div>
+                    </div>
                 </div>
             </div>
         </div>

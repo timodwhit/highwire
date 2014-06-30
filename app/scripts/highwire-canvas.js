@@ -50,7 +50,7 @@ $(function() {
         revert: "invalid",
         snap: ".search-results",
         stack: ".col-md-3",
-        zIndex: 9999,
+        zIndex: 99,
         appendTo: '.drop-zone',
         helper: 'clone'
     });
@@ -189,54 +189,91 @@ $(function() {
   $( "input.clone-btn" ).click(function(event) {
       /* Act on the event */
       if ($('.main-content-outlet .drop-zone .search-result.active').length){
-      $(function() {
-      var progressbar = $( "#clone-progressbar" ),
-        progressLabel = $( "#clone-progressbar .progress-label" );
-      progressbar.fadeIn();
-      progressbar.progressbar({
-        value: false,
-        change: function() {
-          progressLabel.text( progressbar.progressbar( "value" ) + "%" );
-        },
-        complete: function() {
-          progressbar.fadeOut();
-          $(".main-content-outlet .droppable-list .search-result.active")
-              .each(function(index, el) {
-              var $thisListObject = $(this);
-              $thisListObject.removeClass('active');
-              var $thisObjectClone = $thisListObject.closest('li').clone();
-              var cloneTitle = $thisObjectClone.find('.object-title').text();
-              var newCloneTitle = $thisObjectClone.find('.object-title').text(cloneTitle + "-Clone");
-              $(".main-content-outlet .droppable-list .list-view-list").append($thisObjectClone);
-            });
-          $(".main-content-outlet .drop-zone .search-result.active")
-              .each(function(index, el) {
-              var $thisListObject = $(this);
-              $thisListObject.removeClass('active');
-              var $thisObjectClone = $thisListObject.clone().removeAttr('style');
-              var cloneTitle = $thisObjectClone.find('.object-title').text();
-              var newCloneTitle = $thisObjectClone.find('.object-title').text(cloneTitle + "-Clone");
+        $(function() {
+        var progressbar = $( "#clone-progressbar" ),
+          progressLabel = $( "#clone-progressbar .progress-label" );
+          progressLabel.text( 'Cloning...' );
+        progressbar.fadeIn();
+        progressbar.progressbar({
+          value: false,
+          change: function() {
+            progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+          },
+          complete: function() {
+            progressbar.fadeOut();
+            $(".main-content-outlet .droppable-list .search-result.active")
+                .each(function(index, el) {
+                var $thisListObject = $(this);
+                $thisListObject.removeClass('active');
+                var $thisObjectClone = $thisListObject.closest('li').clone();
+                var cloneTitle = $thisObjectClone.find('.object-title').text();
+                var newCloneTitle = $thisObjectClone.find('.object-title').text(cloneTitle + "-Clone");
+                $(".main-content-outlet .droppable-list .list-view-list").append($thisObjectClone);
+              });
+            $(".main-content-outlet .drop-zone .search-result.active")
+                .each(function(index, el) {
+                var $thisListObject = $(this);
+                $thisListObject.removeClass('active');
+                var $thisObjectClone = $thisListObject.clone().removeAttr('style');
+                var cloneTitle = $thisObjectClone.find('.object-title').text();
+                var newCloneTitle = $thisObjectClone.find('.object-title').text(cloneTitle + "-Clone");
 
-              $(".main-content-outlet .drop-zone").append($thisObjectClone);
+                $(".main-content-outlet .drop-zone").append($thisObjectClone);
             });
+          }
+        });
+
+        function progress() {
+          var val = progressbar.progressbar( "value" ) || 0;
+
+          progressbar.progressbar( "value", val + 2 );
+
+          if ( val < 99 ) {
+            setTimeout( progress, 80 );
+          }
         }
+
+        setTimeout( progress, 2000 );
       });
+    }else {
+      alert('Please select an object from the canvas.');
+    }
+  });
 
-      function progress() {
-        var val = progressbar.progressbar( "value" ) || 0;
+  //backup progress bar
+  $( "input.backup-btn" ).click(function(event) {
+      /* Act on the event */
+      if ($('.main-content-outlet .drop-zone .search-result.active').length){
+        $(function() {
+        var progressbar = $( "#backup-progressbar" ),
+          progressLabel = $( "#backup-progressbar .progress-label" );
+        progressLabel.text( 'Starting deletion...' );
+        progressbar.fadeIn();
+        progressbar.progressbar({
+          value: false,
+          change: function() {
+            progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+          },
+          complete: function() {
+            progressbar.fadeOut();
+          }
+        });
 
-        progressbar.progressbar( "value", val + 2 );
+        function progress() {
+          var val = progressbar.progressbar( "value" ) || 0;
 
-        if ( val < 99 ) {
-          setTimeout( progress, 80 );
+          progressbar.progressbar( "value", val + 2 );
+
+          if ( val < 99 ) {
+            setTimeout( progress, 80 );
+          }
         }
-      }
 
-      setTimeout( progress, 2000 );
-    });
-  } else {
-    alert('Please select an object from the canvas.');
-  }
+        setTimeout( progress, 2000 );
+      });
+    }else {
+      alert('Please select an object from the canvas.');
+    }
   });
 
   //delete progress bar
