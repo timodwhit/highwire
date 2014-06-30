@@ -78,7 +78,9 @@
                 <div class="tab-pane fade in active" id="index">
                     <div class="search-form">
                         <div class="select-search">
-                            {{view Ember.Select content=objectNames}}
+                            <div class="ember-select-list">
+                                {{view Ember.Select content=objectNames}}
+                            </div>
                             {{input type="text" placeholder="Search" size="25"}}
                         </div>
                         <!--{{input type="submit" value="search" class="button btn btn-primary full-input"}}-->

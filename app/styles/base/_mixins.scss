@@ -75,3 +75,94 @@
     }
   }
 }
+
+@mixin appearance($value) {
+  -moz-appearance: $value;
+  -webkit-appearance: $value;
+  appearance: $value;
+}
+
+@mixin border-arrow-bottom($bottom-position:-18px, $height:12px, $color:#fff, $margin:$height) {
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    bottom: $bottom-position;
+    display: block;
+    height: $height;
+    width: $height;
+    border-top: $height solid $color;
+    border-left:$height solid transparent;
+    border-right:$height solid transparent;
+    left: 50%;
+    margin-left:$margin;
+  }
+}
+
+@mixin border-arrow-right($right-position:-18px, $height:12px, $color:#fff, $margin:$height) {
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    right: $right-position;
+    display: block;
+    height: $height;
+    width: $height;
+    border-left: $height solid $color;
+    border-top:$height solid transparent;
+    border-bottom:$height solid transparent;
+    top: 50%;
+    margin-top:$margin;
+  }
+}
+@mixin border-arrow-left($left-position:-18px, $height:12px, $color:#fff,$margin:$height) {
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    left: $left-position;
+    display: block;
+    height: $height;
+    width: $height;
+    border-right: $height solid $color;
+    border-top:$height solid transparent;
+    border-bottom:$height solid transparent;
+    top: 50%;
+    margin-top:$margin;
+  }
+}
+@mixin border-arrow($side, $height, $color) {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: $height;
+    width: $height;
+    border-style: solid;
+    border-color: transparent;
+    border-width: $height;
+    #{$side}: -$height;
+    border-#{$side}: 0;
+    @if $side == 'top' {
+      border-bottom-color:$color;
+      left: 50%;
+      margin-left: -$height/2;
+    }
+    @else if $side == 'bottom' {
+      border-top-color: $color;
+      left: 50%;
+      margin-left: -$height/2;
+    }
+    @else if $side == 'right' {
+      border-left-color: $color;
+      top: 50%;
+      margin-top: -$height;
+    }
+    @else if $side == 'left' {
+      border-left-color: $color;
+      top: 50%;
+      margin-top: -$height;
+    }
+  }
+}

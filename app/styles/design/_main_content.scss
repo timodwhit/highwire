@@ -7,6 +7,12 @@
   .view-buttons {
     float: right;
     margin-right: 15px;
+    .btn.active {
+      @include border-arrow('bottom', 8px, $teal);
+      &:hover {
+        background: $teal;
+      }
+    }
   }
   // Wipe the styles from bootstrap
   .well {
