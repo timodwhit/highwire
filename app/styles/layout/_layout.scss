@@ -48,7 +48,7 @@ html, body {
 .l-col-1 {
   background: $gray_1;
   @include respond-to('medium') {
-    width: 160px;
+    width: 200px;
   }
 }
 

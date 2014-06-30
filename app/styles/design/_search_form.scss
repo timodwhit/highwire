@@ -49,6 +49,7 @@
   }
   &.active {
     .logo-image {
+      background: $white;
       border-color: $orange;
     }
   }

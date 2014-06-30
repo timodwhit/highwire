@@ -24,6 +24,7 @@ input,
 button,
 select,
 textarea {
+  margin: 0;
   padding: 5px;
   font-family: $form-font-family; // And only set font-family here for those that need it (note the missing label element)
 }
@@ -61,7 +62,38 @@ select {
 input[type="checkbox"] {
 
 }
-
+/**
+ *
+ */
+.form-wrapper {
+  padding: 10px 15px;
+  background: $white;
+  margin-bottom: 20px;
+  float: left;
+  width: 100%;
+}
+/**
+ * Form inputs with labels
+ */
+.form-input-label {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+  color: #333333;
+  label {
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 3px;
+    line-height: 1;
+    @include rem(1.4);
+  }
+  input {
+    width: 100%;
+    background: #efefef;
+    color: #626262;
+    border: 1px solid darken($gray_4, 10);
+  }
+}
 /**
  * Select List
  */

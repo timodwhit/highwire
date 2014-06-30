@@ -67,14 +67,16 @@
         <div class="l-col l-col-2 side-forms">
             <div class="tab-content">
                 <div class="tab-pane fade in active" id="index">
-                    <div class="search-form">
-                        <div class="select-search">
-                            <div class="ember-select-list">
-                                {{view Ember.Select content=objectNames}}
+                    <div class="form-wrapper">
+                        <div class="search-form">
+                            <div class="select-search">
+                                <div class="ember-select-list">
+                                    {{view Ember.Select content=objectNames}}
+                                </div>
+                                {{input type="text" placeholder="Search" size="25"}}
                             </div>
-                            {{input type="text" placeholder="Search" size="25"}}
+                            <!--{{input type="submit" value="search" class="button btn btn-primary full-input"}}-->
                         </div>
-                        <!--{{input type="submit" value="search" class="button btn btn-primary full-input"}}-->
                     </div>
                     <p>To add components, drag to canvas on the right.</p>
                     <div class="search-results">
@@ -201,22 +203,36 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="new">
-                    <label for="new-domain">Domain Name</label>
-                    {{input type="text" class="full-input" id="new-domain" value="domain" placeholder="Domain"}}
-                    <label for="new-jcode">jCode</label>
-                    {{input type="text" class="full-input" id="new-jcode" value="jcode" placeholder="jCode"}}
+                    <div class="form-wrapper">
+                        <div class="form-input-label">
+                            <label for="new-domain">Domain Name</label>
+                            {{input type="text" class="full-input" id="new-domain" value="domain" placeholder="Domain"}}
+                        </div>
+                        <div class="form-input-label">
+                            <label for="new-jcode">jCode</label>
+                            {{input type="text" class="full-input" id="new-jcode" value="jcode" placeholder="jCode"}}
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="edit">
-                    <label for="edit-domain">Domain Name</label>
-                    {{input type="text" class="full-input" id="edit-domain" value="domain" placeholder="Domain"}}
-                    <label for="edit-jcode">jCode</label>
-                    {{input type="text" class="full-input" id="edit-jcode" value="jcode" placeholder="jCode"}}
+                    <div class="form-wrapper">
+                        <div class="form-input-label">
+                            <label for="edit-domain">Domain Name</label>
+                            {{input type="text" class="full-input" id="edit-domain" value="domain" placeholder="Domain"}}
+                        </div>
+                        <div class="form-input-label">
+                            <label for="edit-jcode">jCode</label>
+                            {{input type="text" class="full-input" id="edit-jcode" value="jcode" placeholder="jCode"}}
+                        </div>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="sync">
-                    {{input type="button" class="button btn btn-primary full-input" disabled="disabled" id="dev" value="Development"}}
-                    {{input type="button" class="button btn btn-primary full-input" id="stage" value="Staging"}}
-                    {{input type="button" class="button btn btn-primary full-input" id="qa" value="QA"}}
-                    {{input type="button" class="button btn btn-primary full-input" id="prod" value="Production"}}
+                    <div class="form-wrapper">
+                        {{input type="button" class="button btn btn-primary full-input" disabled="disabled" id="dev" value="Development"}}
+                        {{input type="button" class="button btn btn-primary full-input" id="stage" value="Staging"}}
+                        {{input type="button" class="button btn btn-primary full-input" id="qa" value="QA"}}
+                        {{input type="button" class="button btn btn-primary full-input" id="prod" value="Production"}}
+                    </div>
                 </div>
                 <div class="sync-overlay" id="dev-sync" style="display:none;">
                     <a class="icon close-icon" href="javascript:void(0)">close</a>
