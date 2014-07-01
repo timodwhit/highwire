@@ -3,7 +3,7 @@
       <ul class="main-menu">
         {{#link-to 'index' tagName='li' class=" icon icon-dashboard"}}<span {{action "select" post}}>Dashboard</span>{{/link-to}}
         {{#link-to 'build' tagName='li' class=" icon icon-application"}}<span {{action "select" post}}>Build Mode</span>{{/link-to}}
-        {{#link-to 'queue' tagName='li' class=" icon icon-queue"}}Queue{{/link-to}}
+        {{#link-to 'queue' tagName='li' class=" icon icon-queue"}}<span {{action "select" post}}>Queue</span>{{/link-to}}
         <span {{action "select" post}}>{{#link-to 'logs' tagName='li' class=" icon icon-logs"}}Logs{{/link-to}}</span>
       </ul>
     </nav>

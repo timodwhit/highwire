@@ -474,12 +474,13 @@ $(function() {
     setTimeout( progress, 2000 );
   });
 
-  $('#queue .progress-1').progressbar({
-      value: 77
+  $('#queue .progress').each(function(index, el) {
+    var $thisProgress = $(this),
+    thisValue = parseInt($(this).attr('data-percent'),10);
+    console.log(thisValue);
+    $thisProgress.progressbar({
+      value: thisValue
     });
-
-  $('#queue .progress-2').progressbar({
-      value: 37
-    });
+  });
 
 });
