@@ -98,12 +98,12 @@ $(function () {
           min: 0,
           max: 5,
           title: {
-              text: 'Responce Time'
+              text: 'Response Time'
           }
       },
 
       series: [{
-          name: 'Responce Time',
+          name: 'Response Time',
           data: [1],
           dataLabels: {
             format: '<div style="text-align:center"><span style="font-size:25px;color:' +
@@ -173,7 +173,7 @@ $(function () {
             },
             yAxis: {
                 title: {
-                    text: 'Responce Time'
+                    text: 'Response Time'
                 }
             },
             legend: {
@@ -203,7 +203,7 @@ $(function () {
 
             series: [{
                 type: 'area',
-                name: 'Responce Time',
+                name: 'Response Time',
                 pointInterval: 24 * 3600 * 1000,
                 pointStart: Date.UTC(2006, 0, 01),
                 data: [
