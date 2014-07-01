@@ -1,5 +1,10 @@
 $(function () {
-  $('.main-menu li.icon-dashboard, .main-menu li.icon-application').click(function(event) {
+  $(window).on('hashchange', function(){
+    // window.setTimeout(function(){
+      location.reload();
+    // }, 1);
+  });
+  $('.main-menu li').click(function(event) {
     $('.main-menu li').each(function(index, el) {
      $(this).removeClass('active');
     });

@@ -11,3 +11,4 @@ require('scripts/router');
 require('scripts/highwire-canvas');
 require('scripts/highwire-dashboard');
 require('scripts/highwire-logs');
+require('scripts/highwire-inactive');
