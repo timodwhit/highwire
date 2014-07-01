@@ -121,7 +121,7 @@ $(function() {
     $('#edit #edit-jcode').val(clickJcode);
   });
 
-//canvas edit submit
+  //canvas edit submit
   $(document).on('click', '#edit .button', function(event) {
     event.preventDefault();
     var $clickedBtn = $(this),
@@ -135,6 +135,19 @@ $(function() {
     $activeObj.find('.technology').text(techVal);
     $activeObj.find('.v-number').text(versionVal);
     $activeObj.find('.image').replaceWith(imageVal);
+  });
+
+  //canvas new submit
+  $(document).on('click', '#new .button', function(event) {
+    event.preventDefault();
+    var $clickedBtn = $(this),
+    titleVal = $('#new #new-domain').val(),
+    versionVal = $('#new #new-version').val(),
+    techVal = $('#new #new-tech').val(),
+    jcodeVal = $('#new #new-jcode').val(),
+    newHtmlVal = '<div class="search-result draggable ui-draggable"><div class="logo-image"><img class="image '+techVal+'" src="images/logo-'+techVal+'.png"></div><span class="object-title" data-role="'+titleVal+'">'+titleVal+'</span><span class="version"><span class="technology">'+techVal+'</span> (v.<span class="v-number">'+versionVal+'</span>)</span><span class="icon icon-move"></span><span class="jCode" style="display: none;">'+jcodeVal+'</span></div>';
+    $activeObj = $('.main-content-outlet .search-result.active');
+    $('.main-content-outlet .drop-zone, .main-content-outlet .droppable-list').append(newHtmlVal);
   });
 
   //enviroment tabs
