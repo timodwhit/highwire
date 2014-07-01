@@ -121,6 +121,22 @@ $(function() {
     $('#edit #edit-jcode').val(clickJcode);
   });
 
+//canvas edit submit
+  $(document).on('click', '#edit .button', function(event) {
+    event.preventDefault();
+    var $clickedBtn = $(this),
+    titleVal = $('#edit #edit-domain').val(),
+    versionVal = $('#edit #edit-version').val(),
+    techVal = $('#edit #edit-tech').val(),
+    jcodeVal = $('#edit #edit-jcode').val(),
+    imageVal = '<img class="image '+techVal+'" src="images/logo-'+techVal+'.png">';
+    $activeObj = $('.main-content-outlet .search-result.active');
+    $activeObj.find('.object-title').text(titleVal);
+    $activeObj.find('.technology').text(techVal);
+    $activeObj.find('.v-number').text(versionVal);
+    $activeObj.find('.image').replaceWith(imageVal);
+  });
+
   //enviroment tabs
   $(document).on('click', '.enviroment-tabs a', function(event) {
     event.preventDefault();
