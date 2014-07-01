@@ -27,6 +27,15 @@
     border-radius: 50%;
     width: 49px;
   }
+  .object-text {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .version {
+    display: block;
+    color: $orange;
+    @include rem(1.2);
+  }
   .icon-move {
     float: right;
     padding-top: 14px;
