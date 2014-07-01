@@ -27,6 +27,9 @@ textarea {
   margin: 0;
   padding: 5px;
   font-family: $form-font-family; // And only set font-family here for those that need it (note the missing label element)
+  border: 1px solid darken($gray_4, 10);
+  color: #626262;
+  background: #efefef;
 }
 
 label {
@@ -89,9 +92,6 @@ input[type="checkbox"] {
   }
   input {
     width: 100%;
-    background: #efefef;
-    color: #626262;
-    border: 1px solid darken($gray_4, 10);
   }
 }
 /**
@@ -109,8 +109,7 @@ input[type="checkbox"] {
     text-indent: 0.01px;
     text-overflow: '';
     position: relative;
-    padding: 5px;
-    color: rgba($black, .5);
+    padding: 4px;
   }
   &::before,
   &::after {
@@ -120,7 +119,7 @@ input[type="checkbox"] {
     z-index: 99;
     content: '';
     // Style
-    border-color: rgba($black, .3);
+    border-color: darken($gray_4, 10);
     border-width: 5px;
     border-style: solid;
     border-right-color: transparent;
@@ -133,5 +132,13 @@ input[type="checkbox"] {
   &::after {
     top: 14px;
     border-bottom-color: transparent;
+  }
+  &.form-input-label {
+    &::before {
+      top: 21px;
+    }
+    &::after {
+      top: 32px;
+    }
   }
 }
