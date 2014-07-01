@@ -1,21 +1,38 @@
 <h1 id="page-title">Logs</h1>
 <div id="logs">
   <ul class="item-list log-list">
-    <li class="item">
+    <li class="item high">
       <div class="info date-time">
         June 28, 2014 @ 18:00
       </div>
       <div class="info task-title">
-        Database Created
+        MySQL Error
       </div>
       <div class="info object">
-        JNL-Example64
+        prod04
       </div>
       <div class="info task-type">
-        Low
+        High
       </div>
       <span class="view-details btn">View</span>
-      <div class="log-details" style="display:none;"></div>
+      <div class="details" style="display:none;">
+        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM taxonomy_index <br />
+        WHERE  (nid = '192')
+        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM node_access <br />
+        WHERE  (nid = '192')
+        140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE url_alias SET source='node/192', alias='about', language='und'
+        WHERE  (pid = '199')<br />
+        140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE search_dataset SET reindex='1404148369'
+        WHERE  (type = 'node') AND (sid = '192')
+        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM taxonomy_index <br />
+        WHERE  (nid = '192')
+        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM node_access <br />
+        WHERE  (nid = '192')
+        140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE url_alias SET source='node/192', alias='about', language='und'
+        WHERE  (pid = '199')<br />
+        140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE search_dataset SET reindex='1404148369'
+        WHERE  (type = 'node') AND (sid = '192')
+      </div>
     </li>
     <li class="item">
       <div class="info date-time">
@@ -32,7 +49,7 @@
       </div>
 
       <span class="view-details btn">View</span>
-      <div class="log-details" style="display:none;"></div>
+      <div class="details" style="display:none;"></div>
     </li>
   </ul>
 </div>
