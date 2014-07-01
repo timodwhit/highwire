@@ -91,6 +91,8 @@ $(function() {
     var clickTitle = $clickObject.find('.object-title').text();
     var clickJcode = $clickObject.find('span.jCode').text();
     var titleDataRole = $clickObject.find('.object-title').attr('data-role');
+    var vNumber = $clickObject.find('.v-number').text();
+    var technology = $clickObject.find('.technology').text().toLowerCase();
 
     $('.main-content-outlet .search-result.active').each(function(index, el) {
       $(this).removeClass('active');
@@ -114,6 +116,8 @@ $(function() {
       };
     });
     $('#edit #edit-domain').val(clickTitle);
+    $('#edit #edit-version').val(vNumber);
+    $('#edit #edit-tech').val(technology);
     $('#edit #edit-jcode').val(clickJcode);
   });
 
