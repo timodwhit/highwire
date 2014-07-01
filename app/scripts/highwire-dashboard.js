@@ -1,10 +1,12 @@
 $(function () {
+  $(window).on('hashchange', function(){
+    // window.setTimeout(function(){
+      location.reload();
+    // }, 1);
+  });
   $('.main-menu li').click(function(event) {
     $('.main-menu li').each(function(index, el) {
      $(this).removeClass('active');
-      window.setTimeout(function(){
-        location.reload();
-      }, 1);
     });
   });
     $(document).ready(function() {
