@@ -1,3 +1,38 @@
 .side-forms {
   padding: 15px 25px;
+  #sync {
+    background: $white;
+    padding: 10px;
+    .orgin-txt {
+      text-transform: uppercase;
+      margin-bottom: 0;
+      font-style: italic;
+      color: #aaaaaa;
+      @include rem(1.4);
+    }
+    .sync-title {
+      margin: 0 0 10px;
+      text-transform: uppercase;
+    }
+    .icon-arrow-down {
+      color: $orange;
+      @include rem(2.4);
+      margin-bottom: 5px;
+      display: block;
+    }
+    .number-obj-selected {
+      float: left;
+      background: $gray_2;
+      padding: 25px 20px;
+      color: $white;
+      margin-top: 10px;
+      width: 100%;
+      .obj-number {
+        display: block;
+        float: left;
+        margin-right: 10px;
+        @include rem(3.6);
+      }
+    }
+  }
 }

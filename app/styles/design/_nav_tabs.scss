@@ -1,0 +1,14 @@
+.tab-pane {
+  &#sync {
+    background: $white;
+    padding: 10px;
+    .number-obj-selected {
+      background: $gray_2;
+      padding: 10px;
+      color: $white;
+      .obj-number {
+        @include rem(3.6);
+      }
+    }
+  }
+}
