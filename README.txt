@@ -1,10 +1,12 @@
-Run:
+On your local machine run:
 
-gem install node
-npm install -g bower
-npm install -g grunt-cli
+Install NodeJS -> http://nodejs.com
+gem install compass
+sudo npm install -g bower
+sudo npm install -g grunt-cli
 
 From the highwire directory run:
-npm install
+
+sudo npm install
 bower install
 grunt serve
