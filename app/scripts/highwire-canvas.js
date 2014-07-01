@@ -121,6 +121,37 @@ $(function() {
     $('#edit #edit-jcode').val(clickJcode);
   });
 
+  //canvas edit submit
+  $(document).on('click', '#edit .button', function(event) {
+    event.preventDefault();
+    var $clickedBtn = $(this),
+    titleVal = $('#edit #edit-domain').val(),
+    versionVal = $('#edit #edit-version').val(),
+    techVal = $('#edit #edit-tech').val(),
+    jcodeVal = $('#edit #edit-jcode').val(),
+    imageVal = '<img class="image '+techVal+'" src="images/logo-'+techVal+'.png">';
+    $activeObj = $('.main-content-outlet .search-result.active');
+    $activeObj.find('.object-title').text(titleVal);
+    $activeObj.find('.technology').text(techVal);
+    $activeObj.find('.v-number').text(versionVal);
+    $activeObj.find('.image').replaceWith(imageVal);
+  });
+
+  //canvas new submit
+  $(document).on('click', '#new .button', function(event) {
+    event.preventDefault();
+    var $clickedBtn = $(this),
+    titleVal = $('#new #new-domain').val(),
+    versionVal = $('#new #new-version').val(),
+    techVal = $('#new #new-tech').val(),
+    jcodeVal = $('#new #new-jcode').val(),
+    newHtmlVal = '<div class="search-result draggable ui-draggable"><div class="logo-image"><img class="image '+techVal+'" src="images/logo-'+techVal+'.png"></div><span class="object-title" data-role="'+titleVal+'">'+titleVal+'</span><span class="version"><span class="technology">'+techVal+'</span> (v.<span class="v-number">'+versionVal+'</span>)</span><span class="icon icon-move"></span><span class="jCode" style="display: none;">'+jcodeVal+'</span></div>';
+    newObjVal = '<div class="search-result-wrapper"><div class="search-result draggable ui-draggable" style="display: none;"><div class="logo-image"><img class="image '+techVal+'" src="images/logo-'+techVal+'.png"></div><div class="object-text"><span class="object-title" data-role="'+titleVal+'">'+titleVal+'</span><span class="version"><span class="technology">'+techVal+'</span> (v.<span class="v-number">'+versionVal+'</span>)</span></div><span class="icon icon-move"></span><span class="jCode" style="display: none;">'+jcodeVal+'</span></div></div>'
+    $activeObj = $('.main-content-outlet .search-result.active');
+    $('.main-content-outlet .drop-zone, .main-content-outlet .droppable-list').append(newHtmlVal);
+    $('#index .search-results').append(newObjVal);
+  });
+
   //enviroment tabs
   $(document).on('click', '.enviroment-tabs a', function(event) {
     event.preventDefault();
@@ -235,6 +266,7 @@ $(function() {
               $(this).removeClass('active');
             });
             $('#myTab a:first').tab('show');
+            $('#myTab .object-action').hide();
           }
         });
 
@@ -364,6 +396,7 @@ $(function() {
           $(this).removeClass('active');
         });
         $('#myTab a:first').tab('show');
+        $('#myTab .object-action').hide();
       }
     });
 
@@ -427,6 +460,7 @@ $(function() {
               $(this).removeClass('active');
             });
           $('#myTab a:first').tab('show');
+          $('#myTab .object-action').hide();
         }
       });
 
