@@ -146,8 +146,10 @@ $(function() {
     techVal = $('#new #new-tech').val(),
     jcodeVal = $('#new #new-jcode').val(),
     newHtmlVal = '<div class="search-result draggable ui-draggable"><div class="logo-image"><img class="image '+techVal+'" src="images/logo-'+techVal+'.png"></div><span class="object-title" data-role="'+titleVal+'">'+titleVal+'</span><span class="version"><span class="technology">'+techVal+'</span> (v.<span class="v-number">'+versionVal+'</span>)</span><span class="icon icon-move"></span><span class="jCode" style="display: none;">'+jcodeVal+'</span></div>';
+    newObjVal = '<div class="search-result-wrapper"><div class="search-result draggable ui-draggable" style="display: none;"><div class="logo-image"><img class="image '+techVal+'" src="images/logo-'+techVal+'.png"></div><div class="object-text"><span class="object-title" data-role="'+titleVal+'">'+titleVal+'</span><span class="version"><span class="technology">'+techVal+'</span> (v.<span class="v-number">'+versionVal+'</span>)</span></div><span class="icon icon-move"></span><span class="jCode" style="display: none;">'+jcodeVal+'</span></div></div>'
     $activeObj = $('.main-content-outlet .search-result.active');
     $('.main-content-outlet .drop-zone, .main-content-outlet .droppable-list').append(newHtmlVal);
+    $('#index .search-results').append(newObjVal);
   });
 
   //enviroment tabs
