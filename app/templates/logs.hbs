@@ -15,41 +15,333 @@
         High
       </div>
       <span class="view-details btn">View</span>
-      <div class="details" style="display:none;">
-        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM taxonomy_index <br />
+      <textarea class="info details" style="display:none;">
+        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM taxonomy_index
         WHERE  (nid = '192')
-        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM node_access <br />
-        WHERE  (nid = '192')
-        140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE url_alias SET source='node/192', alias='about', language='und'
-        WHERE  (pid = '199')<br />
-        140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE search_dataset SET reindex='1404148369'
-        WHERE  (type = 'node') AND (sid = '192')
-        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM taxonomy_index <br />
-        WHERE  (nid = '192')
-        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM node_access <br />
+        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM node_access
         WHERE  (nid = '192')
         140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE url_alias SET source='node/192', alias='about', language='und'
-        WHERE  (pid = '199')<br />
+        WHERE  (pid = '199'
         140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE search_dataset SET reindex='1404148369'
         WHERE  (type = 'node') AND (sid = '192')
-      </div>
+        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM taxonomy_index
+        WHERE  (nid = '192')
+        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM node_access
+        WHERE  (nid = '192')
+        140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE url_alias SET source='node/192', alias='about', language='und'
+        WHERE  (pid = '199'
+        140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE search_dataset SET reindex='1404148369'
+        WHERE  (type = 'node') AND (sid = '192')
+      </textarea>
     </li>
-    <li class="item">
+    <li class="item low">
       <div class="info date-time">
         June 28, 2014 @ 18:00
       </div>
       <div class="info task-title">
-        Database reads above defined threshold
+        Apache Access (last hour)
       </div>
       <div class="info object">
         JNL-Example41
       </div>
       <div class="info task-type">
+        Low
+      </div>
+      <span class="view-details btn">View</span>
+      <textarea class="details" style="display:none; height:150px;">
+        77.75.73.17 - - [29/Jun/2014:08:55:37 +0000] "GET /robots.txt HTTP/1.1" 200 649 "-" "Mozilla/5.0 (compatible; SeznamBot/3.2; +http://fulltext.sblog.cz/)"
+        77.75.73.17 - - [29/Jun/2014:08:55:47 +0000] "GET /laser-genesis HTTP/1.1" 200 4244 "-" "Mozilla/5.0 (compatible; SeznamBot/3.2; +http://fulltext.sblog.cz/)"
+        111.1.36.166 - - [29/Jun/2014:11:05:22 +0000] "GET / HTTP/1.1" 200 4175 "http://jnl-example44.highwire.com" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        111.1.36.166 - - [29/Jun/2014:11:05:24 +0000] "GET /?q=node/add HTTP/1.1" 403 3567 "http://jnl-example44.highwire.com" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        111.1.36.166 - - [29/Jun/2014:11:05:25 +0000] "GET /?q=user/register HTTP/1.1" 200 4265 "http://jnl-example44.highwire.com/?q=node/add" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3
+        111.1.36.166 - - [29/Jun/2014:11:05:26 +0000] "POST /?q=user/register HTTP/1.1" 302 20 "http://jnl-example44.highwire.com/?q=user/register" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        180.76.6.144 - - [29/Jun/2014:11:10:07 +0000] "GET /node/11 HTTP/1.1" 200 4379 "-" "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
+        101.226.167.239 - - [29/Jun/2014:12:16:15 +0000] "GET /robots.txt HTTP/1.1" 200 649 "http://jnl-example44.highwire.com/robots.txt" "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1; 360Spider"
+        192.99.212.17 - - [29/Jun/2014:12:20:27 +0000] "GET / HTTP/1.1" 200 4175 "http://www.jnl-example44.highwire.com/" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+      </textarea>
+    </li>
+    <li class="item high">
+      <div class="info date-time">
+        June 28, 2014 @ 18:00
+      </div>
+      <div class="info task-title">
+        Apache Warning
+      </div>
+      <div class="info object">
+        JNL-Example02
+      </div>
+      <div class="info task-type">
         High
       </div>
-
       <span class="view-details btn">View</span>
-      <div class="details" style="display:none;"></div>
+      <textarea class="details" style="display:none; height:150px;">
+        [Sun Jun 29 06:35:42 2014] [info] [client ::1] SSL library error 1 in handshake (server jnl-example02:443)
+        [Sun Jun 29 06:35:42 2014] [info] SSL Library Error: 336027900 error:140760FC:SSL routines:SSL23_GET_CLIENT_HELLO:unknown protocol speaking not SSL to HTTPS port!?
+        [Sun Jun 29 06:35:42 2014] [info] [client ::1] Connection closed to child 2 with abortive shutdown (server jnl-example02:443)
+        [Sun Jun 29 06:35:43 2014] [info] [client 27.153.204.82] Connection to child 8 established (server jnl-example02:443)
+        [Sun Jun 29 06:35:43 2014] [info] Seeding PRNG with 656 bytes of entropy
+        [Sun Jun 29 06:35:44 2014] [info] [client 27.153.204.82] Connection closed to child 8 with standard shutdown (server jnl-example02:443)
+        [Sun Jun 29 06:35:47 2014] [info] [client 27.153.204.82] Connection to child 4 established (server jnl-example02:443)
+        [Sun Jun 29 06:35:47 2014] [info] Seeding PRNG with 656 bytes of entrop
+        [Sun Jun 29 06:35:49 2014] [info] [client 27.153.204.82] Connection closed to child 4 with standard shutdown (server jnl-example02:443)
+        [Sun Jun 29 06:35:59 2014] [info] [client 146.185.29.18] Connection to child 9 established (server jnl-example02:443)
+        [Sun Jun 29 06:35:59 2014] [info] Seeding PRNG with 656 bytes of entropy
+        [Sun Jun 29 06:35:59 2014] [info] Initial (No.1) HTTPS request received for child 9 (server jnl-example02:443)
+        [Sun Jun 29 06:36:00 2014] [info] Subsequent (No.2) HTTPS request received for child 9 (server jnl-example02:443)
+        [Sun Jun 29 06:36:05 2014] [info] [client 146.185.29.18] (70007)The timeout specified has expired: SSL input filter read failed.
+        [Sun Jun 29 06:36:05 2014] [info] [client 146.185.29.18] Connection closed to child 9 with standard shutdown (server jnl-example02:443
+        [Sun Jun 29 06:38:12 2014] [info] [client ::1] Connection to child 10 established (server jnl-example02:443)
+        [Sun Jun 29 06:38:12 2014] [info] Seeding PRNG with 656 bytes of entrop
+        [Sun Jun 29 06:38:12 2014] [info] [client ::1] SSL library error 1 in handshake (server jnl-example02:443)
+      </textarea>
+    </li>
+    <li class="item high">
+      <div class="info date-time">
+        June 28, 2014 @ 18:00
+      </div>
+      <div class="info task-title">
+        MySQL Warning (slow query)
+      </div>
+      <div class="info object">
+        prod05
+      </div>
+      <div class="info task-type">
+        High
+      </div>
+      <span class="view-details btn">View</span>
+      <textarea class="details" style="display:none; height:150px;">
+        select count(*) into @discard from `information_schema`.`PARTITIONS`;
+        # User@Host: debian-sys-maint[debian-sys-maint] @ localhost []
+        # Query_time: 0.000602  Lock_time: 0.000207 Rows_sent: 0  Rows_examined: 23
+        SET timestamp=1374547706;
+        select count(*) into @discard from `information_schema`.`PLUGINS`;
+        # User@Host: debian-sys-maint[debian-sys-maint] @ localhost []
+        # Query_time: 0.000362  Lock_time: 0.000216 Rows_sent: 0  Rows_examined: 1
+        SET timestamp=1374547706;
+        select count(*) into @discard from `information_schema`.`PROCESSLIST`;
+        # User@Host: debian-sys-maint[debian-sys-maint] @ localhost []
+        # Query_time: 0.000428  Lock_time: 0.000328 Rows_sent: 0  Rows_examined: 0
+        SET timestamp=1374547706;
+        select count(*) into @discard from `information_schema`.`ROUTINES`;
+        # User@Host: debian-sys-maint[debian-sys-maint] @ localhost []
+      </textarea>
+    </li>
+    <li class="item high">
+      <div class="info date-time">
+        June 28, 2014 @ 18:00
+      </div>
+      <div class="info task-title">
+        Apache Error
+      </div>
+      <div class="info object">
+        jnl-example461
+      </div>
+      <div class="info task-type">
+        High
+      </div>
+      <span class="view-details btn">View</span>
+      <textarea class="details" style="display:none; height:150px;">
+        [ Sun Jun 29 01:46:23 2014] [error] [client 1.2.3.4] Directory index forbidden by rule: /home/test/
+        [ Sun Jun 29 01:54:34 2014] [error] [client 1.2.3.4] Directory index forbidden by rule: /apache/web-data/test2
+        [ Sun Jun 29 02:25:55 2014] [error] [client 1.2.3.4] Client sent malformed Host heade
+        [ Sun Jun 29 23:02:01 2014] [error] [client 1.2.3.4] user test: authentication failure for "/~dcid/test1": Password Mismatch
+      </textarea>
+    </li>
+    <li class="item medium">
+      <div class="info date-time">
+        June 28, 2014 @ 18:00
+      </div>
+      <div class="info task-title">
+        Apache Access (last hour)
+      </div>
+      <div class="info object">
+        jnl-example08
+      </div>
+      <div class="info task-type">
+        Medium
+      </div>
+      <span class="view-details btn">View</span>
+      <textarea class="details" style="display:none; height:150px;">
+        77.75.73.17 - - [29/Jun/2014:08:55:47 +0000] "GET /laser-genesis HTTP/1.1" 200 4244 "-" "Mozilla/5.0 (compatible; SeznamBot/3.2; +http://fulltext.sblog.cz/)"
+        111.1.36.166 - - [29/Jun/2014:11:05:22 +0000] "GET / HTTP/1.1" 200 4175 "http://jnl-example08.highwire.com" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        111.1.36.166 - - [29/Jun/2014:11:05:24 +0000] "GET /?q=node/add HTTP/1.1" 403 3567 "http://jnl-example08.highwire.com" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        111.1.36.166 - - [29/Jun/2014:11:05:25 +0000] "GET /?q=user/register HTTP/1.1" 200 4265 "http://jnl-example08.highwire.com/?q=node/add" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        111.1.36.166 - - [29/Jun/2014:11:05:26 +0000] "POST /?q=user/register HTTP/1.1" 302 20 "http://jnl-example08.highwire.com/?q=user/register" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        180.76.6.144 - - [29/Jun/2014:11:10:07 +0000] "GET /node/11 HTTP/1.1" 200 4379 "-" "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
+        101.226.167.239 - - [29/Jun/2014:12:16:15 +0000] "GET /robots.txt HTTP/1.1" 200 649 "http://jnl-example08.highwire.com/robots.txt" "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1; 360Spider"
+        192.99.212.17 - - [29/Jun/2014:12:20:27 +0000] "GET / HTTP/1.1" 200 4175 "http://www.jnl-example44.highwire.com/" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+      </textarea>
+    </li>
+        <li class="item high">
+      <div class="info date-time">
+        June 28, 2014 @ 18:00
+      </div>
+      <div class="info task-title">
+        MySQL Error
+      </div>
+      <div class="info object">
+        prod04
+      </div>
+      <div class="info task-type">
+        High
+      </div>
+      <span class="view-details btn">View</span>
+      <div class="info details" style="display:none;">
+        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM taxonomy_index
+        WHERE  (nid = '192')
+        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM node_access
+        WHERE  (nid = '192')
+        140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE url_alias SET source='node/192', alias='about', language='und'
+        WHERE  (pid = '199'
+        140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE search_dataset SET reindex='1404148369'
+        WHERE  (type = 'node') AND (sid = '192')
+        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM taxonomy_index
+        WHERE  (nid = '192')
+        140630 17:12:38 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: DELETE FROM node_access
+        WHERE  (nid = '192')
+        140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE url_alias SET source='node/192', alias='about', language='und'
+        WHERE  (pid = '199'
+        140630 17:12:49 [Warning] Unsafe statement written to the binary log using statement format since BINLOG_FORMAT = STATEMENT. Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction. Statement: UPDATE search_dataset SET reindex='1404148369'
+        WHERE  (type = 'node') AND (sid = '192')
+      </textarea>
+    </li>
+    <li class="item low">
+      <div class="info date-time">
+        June 28, 2014 @ 18:00
+      </div>
+      <div class="info task-title">
+        Apache Access (last hour)
+      </div>
+      <div class="info object">
+        JNL-Example41
+      </div>
+      <div class="info task-type">
+        Low
+      </div>
+      <span class="view-details btn">View</span>
+      <textarea class="details" style="display:none; height:150px;">
+        77.75.73.17 - - [29/Jun/2014:08:55:37 +0000] "GET /robots.txt HTTP/1.1" 200 649 "-" "Mozilla/5.0 (compatible; SeznamBot/3.2; +http://fulltext.sblog.cz/)"
+        77.75.73.17 - - [29/Jun/2014:08:55:47 +0000] "GET /laser-genesis HTTP/1.1" 200 4244 "-" "Mozilla/5.0 (compatible; SeznamBot/3.2; +http://fulltext.sblog.cz/)"
+        111.1.36.166 - - [29/Jun/2014:11:05:22 +0000] "GET / HTTP/1.1" 200 4175 "http://jnl-example44.highwire.com" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        111.1.36.166 - - [29/Jun/2014:11:05:24 +0000] "GET /?q=node/add HTTP/1.1" 403 3567 "http://jnl-example44.highwire.com" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        111.1.36.166 - - [29/Jun/2014:11:05:25 +0000] "GET /?q=user/register HTTP/1.1" 200 4265 "http://jnl-example44.highwire.com/?q=node/add" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3
+        111.1.36.166 - - [29/Jun/2014:11:05:26 +0000] "POST /?q=user/register HTTP/1.1" 302 20 "http://jnl-example44.highwire.com/?q=user/register" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        180.76.6.144 - - [29/Jun/2014:11:10:07 +0000] "GET /node/11 HTTP/1.1" 200 4379 "-" "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
+        101.226.167.239 - - [29/Jun/2014:12:16:15 +0000] "GET /robots.txt HTTP/1.1" 200 649 "http://jnl-example44.highwire.com/robots.txt" "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1; 360Spider"
+        192.99.212.17 - - [29/Jun/2014:12:20:27 +0000] "GET / HTTP/1.1" 200 4175 "http://www.jnl-example44.highwire.com/" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+      </textarea>
+    </li>
+    <li class="item high">
+      <div class="info date-time">
+        June 28, 2014 @ 18:00
+      </div>
+      <div class="info task-title">
+        Apache Warning
+      </div>
+      <div class="info object">
+        JNL-Example02
+      </div>
+      <div class="info task-type">
+        High
+      </div>
+      <span class="view-details btn">View</span>
+      <textarea class="details" style="display:none; height:150px;">
+        [Sun Jun 29 06:35:42 2014] [info] [client ::1] SSL library error 1 in handshake (server jnl-example02:443)
+        [Sun Jun 29 06:35:42 2014] [info] SSL Library Error: 336027900 error:140760FC:SSL routines:SSL23_GET_CLIENT_HELLO:unknown protocol speaking not SSL to HTTPS port!?
+        [Sun Jun 29 06:35:42 2014] [info] [client ::1] Connection closed to child 2 with abortive shutdown (server jnl-example02:443)
+        [Sun Jun 29 06:35:43 2014] [info] [client 27.153.204.82] Connection to child 8 established (server jnl-example02:443)
+        [Sun Jun 29 06:35:43 2014] [info] Seeding PRNG with 656 bytes of entropy
+        [Sun Jun 29 06:35:44 2014] [info] [client 27.153.204.82] Connection closed to child 8 with standard shutdown (server jnl-example02:443)
+        [Sun Jun 29 06:35:47 2014] [info] [client 27.153.204.82] Connection to child 4 established (server jnl-example02:443)
+        [Sun Jun 29 06:35:47 2014] [info] Seeding PRNG with 656 bytes of entrop
+        [Sun Jun 29 06:35:49 2014] [info] [client 27.153.204.82] Connection closed to child 4 with standard shutdown (server jnl-example02:443)
+        [Sun Jun 29 06:35:59 2014] [info] [client 146.185.29.18] Connection to child 9 established (server jnl-example02:443)
+        [Sun Jun 29 06:35:59 2014] [info] Seeding PRNG with 656 bytes of entropy
+        [Sun Jun 29 06:35:59 2014] [info] Initial (No.1) HTTPS request received for child 9 (server jnl-example02:443)
+        [Sun Jun 29 06:36:00 2014] [info] Subsequent (No.2) HTTPS request received for child 9 (server jnl-example02:443)
+        [Sun Jun 29 06:36:05 2014] [info] [client 146.185.29.18] (70007)The timeout specified has expired: SSL input filter read failed.
+        [Sun Jun 29 06:36:05 2014] [info] [client 146.185.29.18] Connection closed to child 9 with standard shutdown (server jnl-example02:443
+        [Sun Jun 29 06:38:12 2014] [info] [client ::1] Connection to child 10 established (server jnl-example02:443)
+        [Sun Jun 29 06:38:12 2014] [info] Seeding PRNG with 656 bytes of entrop
+        [Sun Jun 29 06:38:12 2014] [info] [client ::1] SSL library error 1 in handshake (server jnl-example02:443)
+      </textarea>
+    </li>
+    <li class="item high">
+      <div class="info date-time">
+        June 28, 2014 @ 18:00
+      </div>
+      <div class="info task-title">
+        MySQL Warning (slow query)
+      </div>
+      <div class="info object">
+        prod05
+      </div>
+      <div class="info task-type">
+        High
+      </div>
+      <span class="view-details btn">View</span>
+      <textarea class="details" style="display:none; height:150px;">
+        select count(*) into @discard from `information_schema`.`PARTITIONS`;
+        # User@Host: debian-sys-maint[debian-sys-maint] @ localhost []
+        # Query_time: 0.000602  Lock_time: 0.000207 Rows_sent: 0  Rows_examined: 23
+        SET timestamp=1374547706;
+        select count(*) into @discard from `information_schema`.`PLUGINS`;
+        # User@Host: debian-sys-maint[debian-sys-maint] @ localhost []
+        # Query_time: 0.000362  Lock_time: 0.000216 Rows_sent: 0  Rows_examined: 1
+        SET timestamp=1374547706;
+        select count(*) into @discard from `information_schema`.`PROCESSLIST`;
+        # User@Host: debian-sys-maint[debian-sys-maint] @ localhost []
+        # Query_time: 0.000428  Lock_time: 0.000328 Rows_sent: 0  Rows_examined: 0
+        SET timestamp=1374547706;
+        select count(*) into @discard from `information_schema`.`ROUTINES`;
+        # User@Host: debian-sys-maint[debian-sys-maint] @ localhost []
+      </textarea>
+    </li>
+    <li class="item high">
+      <div class="info date-time">
+        June 28, 2014 @ 18:00
+      </div>
+      <div class="info task-title">
+        Apache Error
+      </div>
+      <div class="info object">
+        jnl-example461
+      </div>
+      <div class="info task-type">
+        High
+      </div>
+      <span class="view-details btn">View</span>
+      <textarea class="details" style="display:none; min-height:100px">
+        [ Sun Jun 29 01:46:23 2014] [error] [client 1.2.3.4] Directory index forbidden by rule: /home/test/
+        [ Sun Jun 29 01:54:34 2014] [error] [client 1.2.3.4] Directory index forbidden by rule: /apache/web-data/test2
+        [ Sun Jun 29 02:25:55 2014] [error] [client 1.2.3.4] Client sent malformed Host heade
+        [ Sun Jun 29 23:02:01 2014] [error] [client 1.2.3.4] user test: authentication failure for "/~dcid/test1": Password Mismatch
+      </textarea>
+    </li>
+    <li class="item medium">
+      <div class="info date-time">
+        June 28, 2014 @ 18:00
+      </div>
+      <div class="info task-title">
+        Apache Access (last hour)
+      </div>
+      <div class="info object">
+        jnl-example08
+      </div>
+      <div class="info task-type">
+        Medium
+      </div>
+      <span class="view-details btn">View</span>
+      <textarea class="details" style="display:none; height:150px;">
+        77.75.73.17 - - [29/Jun/2014:08:55:47 +0000] "GET /laser-genesis HTTP/1.1" 200 4244 "-" "Mozilla/5.0 (compatible; SeznamBot/3.2; +http://fulltext.sblog.cz/)"
+        111.1.36.166 - - [29/Jun/2014:11:05:22 +0000] "GET / HTTP/1.1" 200 4175 "http://jnl-example08.highwire.com" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        111.1.36.166 - - [29/Jun/2014:11:05:24 +0000] "GET /?q=node/add HTTP/1.1" 403 3567 "http://jnl-example08.highwire.com" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        111.1.36.166 - - [29/Jun/2014:11:05:25 +0000] "GET /?q=user/register HTTP/1.1" 200 4265 "http://jnl-example08.highwire.com/?q=node/add" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        111.1.36.166 - - [29/Jun/2014:11:05:26 +0000] "POST /?q=user/register HTTP/1.1" 302 20 "http://jnl-example08.highwire.com/?q=user/register" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+        180.76.6.144 - - [29/Jun/2014:11:10:07 +0000] "GET /node/11 HTTP/1.1" 200 4379 "-" "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
+        101.226.167.239 - - [29/Jun/2014:12:16:15 +0000] "GET /robots.txt HTTP/1.1" 200 649 "http://jnl-example08.highwire.com/robots.txt" "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1; 360Spider"
+        192.99.212.17 - - [29/Jun/2014:12:20:27 +0000] "GET / HTTP/1.1" 200 4175 "http://www.jnl-example44.highwire.com/" "Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+      </textarea>
     </li>
   </ul>
 </div>
