@@ -266,6 +266,7 @@ $(function() {
               $(this).removeClass('active');
             });
             $('#myTab a:first').tab('show');
+            $('#myTab .object-action').hide();
           }
         });
 
@@ -395,6 +396,7 @@ $(function() {
           $(this).removeClass('active');
         });
         $('#myTab a:first').tab('show');
+        $('#myTab .object-action').hide();
       }
     });
 
@@ -458,6 +460,7 @@ $(function() {
               $(this).removeClass('active');
             });
           $('#myTab a:first').tab('show');
+          $('#myTab .object-action').hide();
         }
       });
 
