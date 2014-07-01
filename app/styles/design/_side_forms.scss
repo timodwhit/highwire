@@ -3,21 +3,22 @@
   #sync {
     background: $white;
     padding: 10px;
-    .orgin-txt {
+    .orgin-txt, .enviro-select {
       text-transform: uppercase;
       margin-bottom: 0;
       font-style: italic;
-      color: #aaaaaa;
+      color: #999999;
+      font-weight: 400;
       @include rem(1.4);
     }
     .sync-title {
-      margin: 0 0 10px;
+      margin: 0;
       text-transform: uppercase;
     }
     .icon-arrow-down {
       color: $orange;
       @include rem(2.4);
-      margin-bottom: 5px;
+      margin: 15px 0;
       display: block;
     }
     .number-obj-selected {
