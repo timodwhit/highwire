@@ -9,16 +9,29 @@ ul.item-list {
   @include respond-to('large') {
     width: 1200px;
   }
+
   .item {
     float: left;
     width: 100%;
     padding: 10px;
     background: $white;
     margin-bottom: 5px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: transparent;
+    &.low {
+      border-left-color: $green;
+    }
+    &.medium {
+      border-left-color: $yellow;
+    }
+    &.high {
+      border-left-color: $orange;
+    }
   }
   .info {
     float: left;
-    width: 25%;
+    width: 22%;
   }
   .task-title {
     font-weight: 700;
@@ -27,5 +40,24 @@ ul.item-list {
     width: 25%;
     float: right;
     margin-bottom: 0;
+  }
+  .view-details {
+    float: right;
+    width: 12%;
+  }
+  .details {
+    margin-top: 10px;
+    border: 1px solid #efefef;
+    padding: 10px;
+    height: 200px;
+    width: 100%;
+    overflow: auto;
+  }
+  .btn {
+    background: #666666;
+    color: $white;
+    &:hover {
+      background: lighten(#666666, 10);
+    }
   }
 }
