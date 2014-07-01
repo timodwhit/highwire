@@ -9,4 +9,7 @@ Highwire.Router.map(function () {
   this.route("logs", {
     path:"/logs"
   });
+  this.route("inactive", {
+    path:"/inactive"
+  });
 });

@@ -5,7 +5,7 @@
     <div class="info-box">
       <span class="info--number">5</span>
       <span class="info--text">Inactive for the last 30 days</span>
-      <span class="btn">View</span>
+      {{#link-to 'inactive' tagName='span' class="btn"}}View{{/link-to}}
     </div>
   </div>
   <div class="chart chart-small">
@@ -13,7 +13,7 @@
     <div class="info-box">
       <span class="info--number">2</span>
       <span class="info--text">Database capacity warnings</span>
-      <span class="btn">View</span>
+      {{#link-to 'logs' tagName='span' class="btn"}}View{{/link-to}}
     </div>
   </div>
   <div id="container-speed" class="chart chart-medium odd"style=" height: 200px;"></div>

@@ -1,5 +1,10 @@
 Highwire.ApplicationController = Ember.Controller.extend({
-  // objectNames: ["Sites", "Other"],
-  // enviromentNames: ["Development", "Staging", "QA", "Production"]
+  actions: {
+    select: function(post) {
+      window.setTimeout(function(){
+        location.reload();
+      }, 10);
+    }
+  }
 });
 

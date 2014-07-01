@@ -3,9 +3,6 @@ $(function () {
     $('.main-menu li').each(function(index, el) {
      $(this).removeClass('active');
     });
-    window.setTimeout(function(){
-      location.reload();
-    }, 1);
   });
     $(document).ready(function() {
     var gaugeOptions = {
@@ -329,7 +326,7 @@ $(function () {
                 type: 'area'
             },
             title: {
-                text: 'Inactive for the last 3 days'
+                text: 'Sites Inactive'
             },
             xAxis: {
                 allowDecimals: false,
